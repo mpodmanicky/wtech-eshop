@@ -1,1 +1,4 @@
-# wtech-eshop
+# WTECH - Semestralny projekt
+## ESHOP
+## Tim
+Tulach, Podmanicky
