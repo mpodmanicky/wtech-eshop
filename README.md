@@ -1,4 +1,4 @@
 # WTECH - Semestralny projekt
-## ESHOP
+## ESHOP -> SFORZANDO
 ## Tim
 Tulach, Podmanicky
