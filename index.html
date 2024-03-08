@@ -20,9 +20,9 @@
     crossorigin="anonymous"></script>
 
   <!--Header and navigation-->
-  <nav class="navbar navbar-expand-md" style="background-color: #e3f2fd;">
+  <nav class="navbar navbar-expand-md">
     <div class="container">
-      <a href="#" class="navbar-brand" style="font-weight: bolder; color:blue;">SFORZANDO</a>
+      <a href="#" class="navbar-brand">SFORZANDO</a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
         <span class="navbar-toggler-icon"></span>
@@ -42,7 +42,7 @@
   </nav>
 
   <!--Search bar and login-->
-  <nav class="navbar" style="background-color: #d3e5f2;">
+  <nav class="navbar" id="main">
     <div class="container">
       <form class="d-flex" role="search">
         <div class="input-group">
@@ -53,7 +53,7 @@
         </div>
         <button class="btn btn-outline-secondary" type="submit">Vyhľadať</button>
       </form>
-      <div class="navbar" style="display: flex;">
+      <div class="navbar" id="side">
         <a href="#login" id="login-icon"><i class="bi bi-person" type="button"></i></a>
         <a href="#login" class="nav-link">Login</a>
       </div>
@@ -65,10 +65,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md d-flex align-items-center">
-          <div class="card mx-auto" onclick="location.href='your_destination_url';"
-            style="cursor:pointer; width: 12rem;">
+          <div class="card mx-auto" onclick="location.href='your_destination_url';">
             <!--add images here-->
-            <img src="images/guitar_licensable.png" alt="guitar" style="width: 100%;">
+            <img src="images/guitar_licensable.png" id="guitar" alt="guitar">
             <div class="card-body text-center">
               <h5 class="card-title">Elektrické gitary</h5>
             </div>

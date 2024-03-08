@@ -1,3 +1,29 @@
 .btn-outline-secondary {
     margin-left: 5px;
 }
+
+.navbar#main {
+    background-color: #e3f2fd;
+}
+
+.navbar#side {
+    display: flex;
+}
+
+.mx-auto {
+    cursor:pointer; width: 12rem;
+}
+
+#guitar {
+    width: 100%;
+}
+
+.navbar-expand-md {
+    background-color: #e3f2fd;
+}
+
+.navbar-brand {
+    font-weight: bolder;
+    color:blue
+}
+
