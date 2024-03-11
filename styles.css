@@ -31,3 +31,11 @@
     text-align: center;
 }
 
+p.footer{
+    margin-bottom: 5px;
+}
+
+h5.footer{
+    padding-bottom: 10px;
+}
+
