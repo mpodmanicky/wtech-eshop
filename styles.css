@@ -1,3 +1,33 @@
+
+@media screen and (min-width:576px) {
+    .carousel-inner{
+        display: flex;
+    }
+    
+    .carousel-item{
+        display: block;
+        margin-right: 0;
+        flex: 00 calc(100%/3);
+    }
+}
+
+.carousel-control-prev, .carousel-control-next{
+    background-color: #e3f2fd;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-inner {
+    padding: 1em
+}
+
+.card {
+    margin: 0 .5em
+}
+
 .btn-outline-secondary {
     margin-left: 5px;
 }
@@ -10,12 +40,8 @@
     display: flex;
 }
 
-.mx-auto {
-    cursor:pointer; width: 12rem;
-}
-
-#guitar {
-    width: 100%;
+.sr-only {
+    color: #000;
 }
 
 .navbar-expand-md {

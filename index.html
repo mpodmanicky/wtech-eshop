@@ -60,63 +60,78 @@
     </div>
   </nav>
 
-  <!--Categories-->
-  <section class="p-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md d-flex align-items-center">
-          <div class="card mx-auto" onclick="location.href='your_destination_url';">
-            <!--add images here-->
-            <img src="images/guitar_licensable.png" id="guitar" alt="guitar">
-            <div class="card-body text-center">
-              <h5 class="card-title">Elektrické gitary</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md d-flex align-items-center">
-          <div class="card mx-auto" onclick="location.href='your_destination_url';">
-            <!--add images here-->
-            <img src="images/acoustic-guitar-licensable.png" id="acoustic-guitar" alt="acoustic guitar">
-            <div class="card-body text-center">
-              <h5 class="card-title">Akustické gitary</h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md d-flex align-items-center">
-          <div class="card mx-auto" onclick="location.href='your_destination_url';">
-            <!--add images here-->
-            <img src="images/trumpet-licensable.jpg" id="trumpet" alt="trumpet">
-            <div class="card-body text-center">
-              <h5 class="card-title">Dychové nástroje</h5>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md d-flex align-items-center">
-          <div class="card mx-auto" onclick="location.href='your_destination_url';">
-            <!--add images here-->
-            <img src="images/drums-licensable.png" id="drums" alt="drums">
-            <div class="card-body text-center">
-              <h5 class="card-title">Bicie nástroje</h5>
-            </div>
-          </div>
-        </div>
-        
-        <div class="col-md d-flex align-items-center">
-          <div class="card mx-auto" onclick="location.href='your_destination_url';">
-            <!--add images here-->
-            <img src="images/grand_piano_licensable.png" id="grandpiano" alt="grandpiano">
-            <div class="card-body text-center">
-              <h5 class="card-title">Klavíry</h5>
-            </div>
+  <!--Carousel-->
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card" onclick="location.href='your_destination_url';">
+          <!--add images here-->
+          <img src="images/guitar_licensable.png" id="guitar" alt="guitar">
+          <div class="card-body text-center">
+            <h5 class="card-title">Elektrické gitary</h5>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
+      <div class="carousel-item">
+        <div class="card" onclick="location.href='your_destination_url';">
+          <!--add images here-->
+          <img src="images/acoustic-guitar-licensable.png" id="acoustic-guitar" alt="acoustic guitar">
+          <div class="card-body text-center">
+            <h5 class="card-title">Akustické gitary</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card" onclick="location.href='your_destination_url';">
+          <!--add images here-->
+          <img src="images/trumpet-licensable.jpg" id="trumpet" alt="trumpet">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dychové nástroje</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card" onclick="location.href='your_destination_url';">
+          <!--add images here-->
+          <img src="images/drums-licensable.png" id="drums" alt="drums">
+          <div class="card-body text-center">
+            <h5 class="card-title">Bicie nástroje</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card" onclick="location.href='your_destination_url';">
+          <!--add images here-->
+          <img src="images/grand_piano_licensable.png" id="grand-piano" alt="grand piano">
+          <div class="card-body text-center">
+            <h5 class="card-title">Klavíry</h5>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only"></span>
+    </a>
+  </div>
+  <script
+			  src="https://code.jquery.com/jquery-3.7.1.min.js"
+			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			  crossorigin="anonymous">
+  </script>
+
+  
   <footer class="bg-body-tertiary text-lg-start">
     <div class="container p-3">
       <div class="row">
