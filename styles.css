@@ -7,6 +7,10 @@
     transition: outline-width 1s ease-in-out;
 }
 
+section {
+    background-image: linear-gradient(#e3f2fd, white);
+}
+
 .card:hover {
     outline-width: 5px;
 }
@@ -19,7 +23,7 @@
     margin-left: 5px;
 }
 
-.navbar#main {
+.navbar#main, .navbar-expand-md {
     background-color: #e3f2fd;
 }
 
@@ -31,13 +35,13 @@
     color: #000;
 }
 
-.navbar-expand-md {
-    background-color: #e3f2fd;
-}
-
 .navbar-brand {
     font-weight: bolder;
     color:blue
+}
+
+footer {
+    background-color: blue;
 }
 
 .footer{
@@ -52,3 +56,10 @@ h5.footer{
     padding-bottom: 10px;
 }
 
+.bottom {
+    background-color: blue;
+}
+
+carousel-control-next, carousel-control-prev {
+    color: blue;
+}
