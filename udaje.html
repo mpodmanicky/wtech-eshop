@@ -9,22 +9,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Shopping cart</title>
-    <style>
-        /* Custom CSS */
-        html,
-        body {
-            height: 100%;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-        }
-
-        main {
-            flex: 1 0 auto;
-        }
-    </style>
 </head>
 
 <body>
@@ -56,91 +40,78 @@
     <!--Sections-->
     <ul class="nav nav-underline nav-fill">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="cart.html">Prehľad</a>
+            <a class="nav-link" href="cart.html">Prehľad</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="udaje.html">Údaje</a>
+            <a class="nav-link active" aria-current="page" href="udaje.html">Údaje</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Platba</a>
+            <a class="nav-link" href="platba.html">Platba</a>
         </li>
     </ul>
 
-    <main class="container">
+    <!--formular-->
+    <div class="container">
         <div class="row mt-3">
             <div class="col-md-8">
-                <!-- Prehľad vecí v košíku -->
+                <!-- Prehľad údajov -->
                 <div class="mb-3">
-                    <h2>Košík</h2>
+                    <h2>Osobné údaje</h2>
                     <!-- Čiara -->
                     <div class="row">
                         <div class="col">
                             <hr class="line">
                         </div>
                     </div>
-                    <!-- Sem vložte prehľad vecí v košíku -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mailová adresa</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">Nikdy Váš e-mail s nikým nebudeme zdieľať.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="meno" class="form-label">Meno a priezvisko</label>
+                            <input type="text" class="form-control" id="meno">
+                        </div>
+                    </form>
+                    <h2>Údaje pre dopravcu</h2>
                     <!-- Čiara -->
                     <div class="row">
                         <div class="col">
                             <hr class="line">
                         </div>
                     </div>
-                    <!-- Čiara -->
-                    <div class="row">
-                        <div class="col">
-                            <hr class="line">
+                    <form>
+                        <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+                            <option selected>Vyberte kraijnu</option>
+                            <option value="1">Slovensko</option>
+                            <option value="2">Česko</option>
+                            <option value="3">Iné</option>
+                        </select>
+                        <div class="mb-3">
+                            <label for="mesto" class="form-label">Mesto</label>
+                            <input type="text" class="form-control" id="mesto" placeholder="Banská Bystrica">
                         </div>
-                    </div>
+                        <div class="mb-3">
+                            <label for="ulica" class="form-label">Ulica a číslo domu</label>
+                            <input type="text" class="form-control" id="ulica" placeholder="Ulica, číslo">
+                        </div>
+                        <div class="mb-3 col-md-2">
+                            <label for="postcode" class="form-label">PSČ</label>
+                            <input type="text" class="form-control" id="postcode" placeholder="Poštové číslo">
+                        </div>
+                    </form>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </div>
             <div class="col-md-4 divider d-flex justify-content-center align-items-center">
                 <!-- Tlačidlo pre pokračovanie -->
                 <div class="text-center">
-                    <a href="udaje.html" class="btn btn-primary">Pokračovať</a>
+                    <a href="platba.html" class="btn btn-primary">Pokračovať</a>
                 </div>
             </div>
         </div>
-    </main>
-
-    <!--Footer-->
-    <footer class="bg-body-tertiary text-lg-start">
-        <div class="container p-3">
-            <div class="row">
-
-                <div class="col-xl-4 col-md-6 mb-4 mb-md-0">
-                    <h5 class="footer">
-                        Copyright
-                    </h5>
-                    <p class="footer">
-                        © 1994 – 2024 Sforzando.sk a.s
-                    </p>
-                </div>
-                <div class="col-xl-4 col-md-6 mb-4 mb-md-0">
-                    <h5 class="footer">
-                        FAQ
-                    </h5>
-                    <p class="footer">
-                        Môžem nakupovať aj bez registrácie?
-                    </p>
-                    <p class="footer">
-                        Poskytujete aj upravenie nástrojov?
-                    </p>
-                </div>
-                <div class="col-xl-4 col-md-6 mb-4 mb-md-0">
-                    <h5 class="footer">
-                        Pomoc
-                    </h5>
-                    <p class="footer">
-                        support@sforzando.sk
-                    </p>
-                    <p class="footer">
-                        Infolinka - 42 22 33 44 512
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    </div>
 </body>
 
 </html>

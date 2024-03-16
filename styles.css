@@ -26,7 +26,8 @@ section {
     margin-left: 5px;
 }
 
-.navbar#main, .navbar-expand-md {
+.navbar#main,
+.navbar-expand-md {
     background-color: #e3f2fd;
 }
 
@@ -40,22 +41,22 @@ section {
 
 .navbar-brand {
     font-weight: bolder;
-    color:blue
+    color: blue
 }
 
 footer {
     background-color: blue;
 }
 
-.footer{
+.footer {
     text-align: center;
 }
 
-p.footer{
+p.footer {
     margin-bottom: 5px;
 }
 
-h5.footer{
+h5.footer {
     padding-bottom: 10px;
 }
 
@@ -63,6 +64,7 @@ h5.footer{
     background-color: blue;
 }
 
-carousel-control-next, carousel-control-prev {
+carousel-control-next,
+carousel-control-prev {
     color: blue;
 }
