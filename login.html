@@ -8,28 +8,83 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Custom CSS */
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+    </style>
     <title>Login</title>
 </head>
 
 <body>
-    <form>
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-        <div class="form-floating">
-            <input id="floatingInput" class="form-control" type="email" placeholder="name@example.com">
-            <label for="floatingInput">Email adress</label>
-        </div>
-        <div class="form-floating">
-            <input id="floatingPassword" class="form-control" type="password" placeholder="Password">
-            <label for="floatingPassword">Password</label>
-        </div>
-    </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <!--Header and navigation-->
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+            <a href="#" class="navbar-brand">SFORZANDO</a>
 
-    <footer class="bg-body-tertiary text-lg-start fixed-bottom">
-        <div class="container p-3">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">O nás</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="content">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-12 col-sm-8 col-md-6 m-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <form action="">
+                                <div class="mb-3">
+                                    <label for="username" class="form-label">Prihlasovacie meno</label>
+                                    <input type="text" class="form-control" id="username"
+                                        placeholder="Používateľské meno">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="heslo" class="form-label">Heslo</label>
+                                    <input type="password" class="form-control" id="heslo" placeholder="Heslo">
+                                </div>
+                                <div class="text-center mt-3">
+                                    <button class="btn btn-primary">Prihlásenie</button>
+                                    <a href="#" class="nav-link mt-3">Nemáte účet ?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-lg-start py-3">
+        <div class="container">
             <div class="row">
                 <div class="col-xl-4 col-md-6 mb-4 mb-md-0">
                     <h5 class="footer">
@@ -64,7 +119,7 @@
             </div>
         </div>
     </footer>
-    
+
 </body>
 
 </html>
