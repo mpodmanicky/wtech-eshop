@@ -2,6 +2,76 @@ Udaje o pouzivateloch - id, meno (50 znakov), heslo(hash), email(254 znakov), ro
 Udaje o bydlisku - krajina(enum), mesto(varchar 36), ulica(varchar 120), psc(string 5 znakov), id pouzivatela
 Objednavky - id pouzivatela, nazov produktu(varchar 50), datum(iso 8601), cena
 Objednavky produkty - foreign keys
-Produkty - kategoria(enum), cena, znacka(varchar 32), nazov(varchar 50), farba(enum), pocet dostupnych kusov
+Produkty - kategoria varchar(32), cena, znacka(varchar 32), nazov(varchar 32), farba, pocet dostupnych kusov
 Obrazky - id porduktu, url alebo obrazok
 Popis produktu - id produktu, text(text 240)
+
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table users {
+  id integer [primary key]
+  username varchar(50)
+  role enum("admin", "user")
+  password text
+  email varchar(254)
+}
+
+Table addresses {
+  id integer [primary key]
+  country enum("Slovensko", "Cesko")
+  city varchar(36)
+  street varchar(120)
+  postal_code varchar(5)
+  userid integer
+}
+
+Table products_orders {
+  id integer [primary key]
+  product_id integer
+  order_id integer
+}
+
+Table orders {
+  id integer [primary key]
+  userid integer
+  product_name varchar(50)
+  date datetime
+  price integer
+}
+
+Table products {
+  id integer [primary key]
+  category varchar(32)
+  price integer
+  brand varchar(32)
+  name varchar(32)
+  colour varchar(10)
+  available_products integer
+}
+
+Table iamges {
+  id integer [primary key]
+  product_id integer
+  url url
+}
+
+Table product_descriptions {
+  id integer [primary key]
+  product_id integer
+  text text(240)
+}
+
+
+
+Ref: "users"."id" < "addresses"."userid"
+
+Ref: "product_descriptions"."product_id" < "products"."id"
+
+Ref: "iamges"."product_id" < "products"."id"
+
+Ref: "users"."id" < "orders"."userid"
+
+Ref: "products_orders"."product_id" < "products"."id"
+
+Ref: "products_orders"."order_id" < "orders"."id"
