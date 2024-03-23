@@ -1,0 +1,7 @@
+Udaje o pouzivateloch - id, meno (50 znakov), heslo(hash), email(254 znakov), rola(enum)
+Udaje o bydlisku - krajina(enum), mesto(varchar 36), ulica(varchar 120), psc(string 5 znakov), id pouzivatela
+Objednavky - id pouzivatela, nazov produktu, datum, cena
+Objednavky produkty - foreign keys
+Produkty - kategoria, cena, znacka, nazov, farba, pocet dostupnych kusov
+Obrazky - id porduktu, url alebo obrazok
+Popis produktu - id produktu, text
