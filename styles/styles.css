@@ -68,3 +68,12 @@ carousel-control-next,
 carousel-control-prev {
     color: blue;
 }
+
+#navbarDropdown {
+    justify-content: space-evenly;
+}
+
+#filterButton {
+    width: 10rem;
+    margin: 5px;
+}
