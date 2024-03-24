@@ -77,27 +77,40 @@ carousel-control-prev {
     width: 10rem;
     margin: 5px;
 }
+
 .cart-button {
     position: fixed;
-    bottom: 20px; 
-    right: 20px;  
-  }
+    bottom: 20px;
+    right: 20px;
+}
+
 #cart-button {
     border-radius: 50px;
 }
+
 h1 {
     color: blue;
 }
+
 #product-image-column {
     border-radius: 10px;
-    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
 }
+
 #product-card {
     justify-content: space-between;
 }
+
 #arrow-button {
     border-radius: 50px;
 }
+
 #arrow-combo {
     margin: 10px;
+}
+
+#add-to-cart {
+    height: 6rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);
 }
