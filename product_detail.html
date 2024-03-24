@@ -1,3 +1,6 @@
+<!--Made by Martin Podmanicky, Dominik Tulach-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,10 +11,14 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Košík</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>Produkt</title>
 </head>
-
 <body>
+    
+
     <!--Header and navigation-->
     <nav class="navbar navbar-expand-md">
         <div class="container">
@@ -34,57 +41,42 @@
         </div>
     </nav>
 
-    <!--Sections-->
-    <ul class="nav nav-underline nav-fill">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="cart.html">Prehľad</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="udaje.html">Údaje</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Platba</a>
-        </li>
-    </ul>
-
-    <main class="container">
-        <div class="row mt-3">
-            <div class="col-md-8">
-                <!-- Prehľad vecí v košíku -->
-                <div class="mb-3">
-                    <h2>Košík</h2>
-                    <!-- Čiara -->
-                    <div class="row">
-                        <div class="col">
-                            <hr class="line">
-                        </div>
-                    </div>
-                    <!-- Sem vložte prehľad vecí v košíku -->
-                    <!-- Čiara -->
-                    <div class="row">
-                        <div class="col">
-                            <hr class="line">
-                        </div>
-                    </div>
-                    <!-- Čiara -->
-                    <div class="row">
-                        <div class="col">
-                            <hr class="line">
-                        </div>
-                    </div>
+    <!--Search bar and login-->
+    <nav class="navbar" id="main">
+        <div class="container">
+            <form class="d-flex" role="search">
+                <div class="input-group">
+                    <span id="basic-addon1" class="input-group-text">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input class="form-control" type="search" placeholder="Zadajte názov produktu" aria-label="Search">
                 </div>
-            </div>
-            <div class="col-md-4 divider d-flex justify-content-center align-items-center">
-                <!-- Tlačidlo pre pokračovanie -->
-                <div class="text-center">
-                    <a href="udaje.html" class="btn btn-primary">Pokračovať</a>
-                </div>
+                <button class="btn btn-outline-secondary" type="submit">Vyhľadať</button>
+            </form>
+            <div class="navbar" id="side">
+                <a href="login.html" id="login-icon"><i class="bi bi-person" type="button"></i></a>
+                <a href="login.html" class="nav-link">Login</a>
             </div>
         </div>
-    </main>
+    </nav>
+    <!--Name of the product-->
+    <div class="container">
+        <h1>Elektricka Gitara - Fender</h1>
+    </div>
 
-    <!--Footer-->
-    <footer class="bg-body-tertiary text-lg-start" id="custom-footer">
+    <div class="container">
+        
+    </div>
+
+    <!--Cart Button-->
+    <div class="cart-button">
+        <a href="#" class="btn btn-primary btn-lg" id="cart-button">
+          <i class="bi bi-cart2"></i>
+        </a>
+      </div>
+
+     <!--Footer-->
+     <footer class="bg-body-tertiary text-lg-start">
         <div class="container p-3">
             <div class="row">
 
@@ -123,5 +115,4 @@
     </footer>
 
 </body>
-
 </html>

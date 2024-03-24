@@ -77,3 +77,14 @@ carousel-control-prev {
     width: 10rem;
     margin: 5px;
 }
+.cart-button {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;  
+  }
+#cart-button {
+    border-radius: 50px;
+}
+h1 {
+    color: blue;
+}
