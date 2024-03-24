@@ -22,7 +22,7 @@
     <!--Header and navigation-->
     <nav class="navbar navbar-expand-md">
         <div class="container">
-            <a href="#" class="navbar-brand">SFORZANDO</a>
+            <a href="index.html" class="navbar-brand">SFORZANDO</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -61,7 +61,7 @@
     </nav>
 
     <!--Zoradenie-->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" id="filter-navbar">
         <div class="container">
             <a class="navbar-brand" style="cursor: pointer;">Filter</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDropdown"
@@ -73,46 +73,50 @@
                 <div class="btn-group">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false" id="filterButton">
-                        Action
+                        Typ nástroja
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        <li><a class="dropdown-item" href="#">Gitara</a></li>
+                        <li><a class="dropdown-item" href="#">Klavír</a></li>
+                        <li><a class="dropdown-item" href="#">Bubny</a></li>
                     </ul>
                 </div>
                 <div class="btn-group">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false" id="filterButton">
-                        Action
+                        Značka
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        <li><a class="dropdown-item" href="#">Fender</a></li>
+                        <li><a class="dropdown-item" href="#">Gibson</a></li>
+                        <li><a class="dropdown-item" href="#">Yamaha</a></li>
                     </ul>
                 </div>
                 <div class="btn-group">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false" id="filterButton">
-                        Action
+                        Cenový rozsah
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">0 - 49 €</a></li>
+                        <li><a class="dropdown-item" href="#">50 - 149 €</a></li>
+                        <li><a class="dropdown-item" href="#">150 - 299 €</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        <li><a class="dropdown-item" href="#">300 - €</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false" id="filterButton">
+                        Zoradiť
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Od najlacnejšieho</a></li>
+                        <li><a class="dropdown-item" href="#">Od najdrahšieho</a></li>
+                        <li><a class="dropdown-item" href="#">Podľa abecedy vzostupne</a></li>
+                        <li><a class="dropdown-item" href="#">Podľa abecedy zostupne</a></li>
                     </ul>
                 </div>
                 <!-- <ul class="nav nav-pills">
@@ -159,12 +163,70 @@
             </div>
         </div>
     </nav>
+    <br>
+
+    <div class="container">
+        <div class="row" style="justify-content: space-evenly;">
+            <div class="col-md-3">
+                <div class="card" onclick="location.href='product_detail.html'">
+                    <img src="images/grand_piano_licensable.png" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <p class="card-text"><strong>Grand Piano Petrof</strong></p>
+                        <div class="row">
+                            <div class="col">
+                                <h3>1500 € s DPH</h3>
+                                <p>1200 € bez DPH</p>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="btn btn-primary">Pridať do košíka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" onclick="location.href='product_detail.html'">
+                    <img src="images/grand_piano_licensable.png" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <p class="card-text"><strong>Grand Piano Petrof</strong></p>
+                        <div class="row">
+                            <div class="col">
+                                <h3>1500 € s DPH</h3>
+                                <p>1200 € bez DPH</p>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="btn btn-primary">Pridať do košíka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" onclick="location.href='product_detail.html'">
+                    <img src="images/grand_piano_licensable.png" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <p class="card-text"><strong>Grand Piano Petrof</strong></p>
+                        <div class="row">
+                            <div class="col">
+                                <h3>1500 € s DPH</h3>
+                                <p>1200 € bez DPH</p>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="btn btn-primary">Pridať do košíka</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--Cart Button-->
     <div class="cart-button">
         <a href="#" class="btn btn-primary btn-lg" id="cart-button">
-          <i class="bi bi-cart2"></i>
+            <i class="bi bi-cart2"></i>
         </a>
-      </div>
+    </div>
 
     <!-- <script>
         const navLinks = document.querySelectorAll('.nav-link');
@@ -184,5 +246,41 @@
     </script> -->
 
 </body>
+<footer class="bg-body-tertiary text-lg-start">
+    <div class="container p-3">
+        <div class="row">
+            <div class="col-xl-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="footer">
+                    Copyright
+                </h5>
+                <p class="footer">
+                    © 1994 – 2024 Sforzando.sk a.s
+                </p>
+            </div>
+            <div class="col-xl-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="footer">
+                    <a href="faq.html">FAQ</a>
+                </h5>
+                <p class="footer">
+                    <a href="faq.html#1">Môžem nakupovať aj bez registrácie?</a>
+                </p>
+                <p class="footer">
+                    <a href="faq.html#2">Poskytujete aj upravenie nástrojov?</a>
+                </p>
+            </div>
+            <div class="col-xl-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="footer" id="contact">
+                    Pomoc
+                </h5>
+                <p class="footer">
+                    support@sforzando.sk
+                </p>
+                <p class="footer">
+                    Infolinka - 42 22 33 44 512
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </html>
