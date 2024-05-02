@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="about_us.html" class="nav-link">O nás</a>
+                        <a href="about_us" class="nav-link">O nás</a>
                     </li>
                     <li class="nav-item">
                         <a href="#contact" class="nav-link">Kontakt</a>
@@ -49,13 +49,13 @@
                     </span>
                     <input class="form-control" type="search" placeholder="Zadajte názov produktu" aria-label="Search">
                 </div>
-                <a href="products.html">
+                <a href="products">
                     <button class="btn btn-outline-secondary" type="button">Vyhľadať</button>
                 </a>
             </form>
             <div class="navbar" id="side">
-                <a href="login.html" id="login-icon"><i class="bi bi-person" type="button"></i></a>
-                <a href="login.html" class="nav-link">Login</a>
+                <a href="login" id="login-icon"><i class="bi bi-person" type="button"></i></a>
+                <a href="login" class="nav-link">Login</a>
             </div>
         </div>
     </nav>
@@ -66,7 +66,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-3 col-md-4 col-sm-6 col-xs-6 d-flex align-items-center" id="card-wrapper">
-                    <div class="card" onclick="location.href='products.html';">
+                    <div class="card" onclick="location.href='products';">
                         <img src="images/guitar_licensable.png" id="guitar" alt="guitar" class="img-fluid">
                         <div class="card-body text-center">
                             <h5 class="card-title">Elektrické gitary</h5>
@@ -75,7 +75,7 @@
                 </div>
 
                 <div class="col-xl-3 col-md-4 col-sm-6 col-xs-6 d-flex align-items-center" id="card-wrapper">
-                    <div class="card" onclick="location.href='products.html';">
+                    <div class="card" onclick="location.href='products';">
                         <img src="images/acoustic-guitar-licensable.png" id="acoustic-guitar" alt="acoustic guitar"
                             class="img-fluid">
                         <div class="card-body text-center">
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="col-xl-3 col-md-4 col-sm-6 col-xs-6 d-flex align-items-center" id="card-wrapper">
-                    <div class="card" onclick="location.href='products.html';">
+                    <div class="card" onclick="location.href='products';">
                         <img src="images/trumpet-licensable.jpg" id="trumpet" alt="trumpet" class="img-fluid">
                         <div class="card-body text-center">
                             <h5 class="card-title">Dychové nástroje</h5>
@@ -94,7 +94,7 @@
                 </div>
 
                 <div class="col-xl-3 col-md-4 col-sm-6 col-xs-6 d-flex align-items-center" id="card-wrapper">
-                    <div class="card" onclick="location.href='products.html';">
+                    <div class="card" onclick="location.href='products';">
                         <img src="images/drums-licensable.png" id="drums" alt="drums" class="img-fluid">
                         <div class="card-body text-center">
                             <h5 class="card-title">Bicie nástroje</h5>
@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="col-xl-3 col-md-4 col-sm-6 col-xs-6 d-flex align-items-center" id="card-wrapper">
-                    <div class="card" onclick="location.href='products.html';">
+                    <div class="card" onclick="location.href='products';">
                         <img src="images/grand_piano_licensable.png" id="grandpiano" alt="grandpiano" class="img-fluid">
                         <div class="card-body text-center">
                             <h5 class="card-title">Klavíry</h5>
@@ -112,7 +112,7 @@
                 </div>
 
                 <div class="col-xl-3 col-md-4 col-sm-6 col-xs-6 d-flex align-items-center" id="card-wrapper">
-                    <div class="card" onclick="location.href='products.html';">
+                    <div class="card" onclick="location.href='products';">
                         <img src="images/bass-guitar-licensable.png" id="bass-guitar" alt="bass guitar"
                             class="img-fluid">
                         <div class="card-body text-center">
@@ -143,7 +143,7 @@
 
     <!--Cart Button-->
     <div class="cart-button">
-        <a href="cart.html" class="btn btn-primary btn-lg" id="cart-button">
+        <a href="cart" class="btn btn-primary btn-lg" id="cart-button">
             <i class="bi bi-cart2"></i>
         </a>
     </div>
@@ -162,13 +162,13 @@
             </div>
             <div class="col-xl-4 col-md-6 mb-4 mb-md-0">
                 <h5 class="footer">
-                    <a href="faq.html">FAQ</a>
+                    <a href="faq">FAQ</a>
                 </h5>
                 <p class="footer">
-                    <a href="faq.html#1">Môžem nakupovať aj bez registrácie?</a>
+                    <a href="faq#1">Môžem nakupovať aj bez registrácie?</a>
                 </p>
                 <p class="footer">
-                    <a href="faq.html#2">Poskytujete aj upravenie nástrojov?</a>
+                    <a href="faq#2">Poskytujete aj upravenie nástrojov?</a>
                 </p>
             </div>
             <div class="col-xl-4 col-md-6 mb-4 mb-md-0">
