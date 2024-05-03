@@ -5,10 +5,19 @@
 <head>
     <title>Admin Page</title>
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <h1>Admin Page</h1>
+    <div class="sidebar">
+        <h1>Admin</h1>
+    <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+    <a href="#"><i class="fas fa-user"></i> Users</a>
+    <a href="#"><i class="fas fa-file"></i> Products</a>
+    <a href="#"><i class="fas fa-cog"></i> Settings</a>
 
+    </div>
+
+    <div class="content">
     <select id="productSelect">
         <!-- Add options for products here -->
         <option value="klavir_petrof">Grand klavír - Petrof</option>
@@ -45,6 +54,7 @@
 
     <label for="image2">Image 2:</label>
     <input type="file" id="image2" name="image2"><br><br>
+</div>
 
     <button id="addButton">Add</button>
 
