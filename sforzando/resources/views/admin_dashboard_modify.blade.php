@@ -4,14 +4,17 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Modify Page</title>
+    <link rel="sytlesheet" href="{{ asset(css/admin.css) }}">
 </head>
+
 <body>
     <h1>Modify Page</h1>
     <br>
 
-    
+
     <label for="name">Name:</label>
     <input type="text" id="name" name="name"><br><br>
 
