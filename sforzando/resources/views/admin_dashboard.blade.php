@@ -4,6 +4,7 @@
 <html>
 <head>
     <title>Admin Page</title>
+    <link href="{{ asset('css/admin.css') }}" rel="stylesheet" />
 </head>
 <body>
     <h1>Admin Page</h1>
