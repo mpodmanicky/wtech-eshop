@@ -1,13 +1,12 @@
 <!--Made by Martin Podmanicky, Dominik Tulach-->
 
 <!--Made by Martin Podmanicky, Dominik Tulach-->
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Modify Page</title>
-    <link rel="sytlesheet" href="{{ asset(css/admin.css) }}">
+    <link href="{{ asset(css / admin . css) }}" rel="stylesheet" />
 </head>
 
 <body>
