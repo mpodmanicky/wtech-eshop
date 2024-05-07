@@ -17,7 +17,7 @@
     <!--Header and navigation-->
     <nav class="navbar navbar-expand-md">
         <div class="container">
-            <a href="index.html" class="navbar-brand">SFORZANDO</a>
+            <a href="/" class="navbar-brand">SFORZANDO</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -39,13 +39,13 @@
     <!--Sections-->
     <ul class="nav nav-underline nav-fill">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="cart.html">Prehľad</a>
+            <a class="nav-link active" aria-current="page" href="cart">Prehľad</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="udaje.html">Údaje</a>
+            <a class="nav-link" href="info">Údaje</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="platba.html">Platba</a>
+            <a class="nav-link" href="payment">Platba</a>
         </li>
     </ul>
 

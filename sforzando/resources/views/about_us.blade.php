@@ -19,7 +19,7 @@
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-md">
         <div class="container">
-            <a href="index.html" class="navbar-brand">SFORZANDO</a>
+            <a href="/" class="navbar-brand">SFORZANDO</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -50,7 +50,7 @@
         <br>
         <p>Tešíme sa na spoluprácu s vami!</p>
         <br>
-        <a href="index.html">
+        <a href="/">
             <button type="button" class="btn btn-primary">Naspäť na hlavnú stránku</button>
         </a>
     </section>

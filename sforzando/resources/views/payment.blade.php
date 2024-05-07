@@ -20,7 +20,7 @@
     <!--Header and navigation-->
     <nav class="navbar navbar-expand-md">
         <div class="container">
-            <a href="#" class="navbar-brand">SFORZANDO</a>
+            <a href="/" class="navbar-brand">SFORZANDO</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="about_us.html" class="nav-link">O nás</a>
+                        <a href="about_us" class="nav-link">O nás</a>
                     </li>
                     <li class="nav-item">
                         <a href="#contact" class="nav-link">Kontakt</a>
@@ -42,13 +42,13 @@
     <!--Sections-->
     <ul class="nav nav-underline nav-fill">
         <li class="nav-item">
-            <a class="nav-link" href="cart.html">Prehľad</a>
+            <a class="nav-link" href="cart">Prehľad</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="udaje.html">Údaje</a>
+            <a class="nav-link" href="info">Údaje</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="platba.html">Platba</a>
+            <a class="nav-link active" aria-current="page" href="payment">Platba</a>
         </li>
     </ul>
 
