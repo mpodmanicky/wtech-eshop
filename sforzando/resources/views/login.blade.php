@@ -60,7 +60,7 @@
                                     <a href="index.html">
                                         <button type="button" class="btn btn-primary">Prihlásenie</button>
                                     </a>
-                                    <a href="register.html" class="nav-link mt-3">Nemáte účet? Zaregistrujte sa</a>
+                                    <a href="register" class="nav-link mt-3">Nemáte účet? Zaregistrujte sa</a>
                                 </div>
                             </form>
                         </div>
