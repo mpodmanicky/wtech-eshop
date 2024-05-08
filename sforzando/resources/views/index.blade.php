@@ -61,6 +61,7 @@
     </nav>
 
     <!--Categories-->
+    <!--Categories in carousel-->
     <section class="p-5">
 
         <div class="container">
