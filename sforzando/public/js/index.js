@@ -19,7 +19,7 @@ if (window.matchMedia('(min-width: 768px)').matches) {
       console.log("next");
       scrollPosition += cardWidth;  //update scroll position
       $(".carousel-inner").animate({ scrollLeft: scrollPosition },
-        600); //scroll left
+        300); //scroll left
     }
   });
 
@@ -28,7 +28,7 @@ if (window.matchMedia('(min-width: 768px)').matches) {
       console.log("prev");
       scrollPosition -= cardWidth;  //update scroll position
       $(".carousel-inner").animate({ scrollLeft: scrollPosition },
-        600); //scroll left 
+        300); //scroll right 
     }
   });
 } else {
