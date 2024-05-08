@@ -5,21 +5,17 @@
     transition: outline-width 1s ease-in-out;
 }
 
+.carousel-item {
+    padding: 0.7rem;
+    border-radius: 25px;
+}
+
 section {
     background-image: linear-gradient(#e3f2fd, white);
 }
 
 .card:hover {
     outline-width: 5px;
-}
-
-#card-wrapper {
-    margin-bottom: 20px;
-
-}
-
-#card-wrapper:hover {
-    size: scale(1.1);
 }
 
 .btn-outline-secondary {
@@ -117,4 +113,16 @@ h1 {
 
 #filter-navbar {
     box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 768px) {
+    #categoriesCarousel .carousel-inner {
+        display: flex;
+    }
+
+    #categoriesCarousel .carousel-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100% / 3);
+    }
 }

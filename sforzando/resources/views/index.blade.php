@@ -17,6 +17,9 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src='js/index.js'></script>
     <!--Header and navigation-->
     <nav class="navbar navbar-expand-md">
         <div class="container">
@@ -64,9 +67,9 @@
     <!--Categories in carousel-->
     <section class="p-5">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-3 col-md-4 col-sm-6 col-xs-6 d-flex align-items-center" id="card-wrapper">
+        <div id="categoriesCarousel" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
                     <div class="card" onclick="location.href='products';">
                         <img src="images/guitar_licensable.png" id="guitar" alt="guitar" class="img-fluid">
                         <div class="card-body text-center">
@@ -74,8 +77,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-xl-3 col-md-4 col-sm-6 col-xs-6 d-flex align-items-center" id="card-wrapper">
+                <div class="carousel-item">
                     <div class="card" onclick="location.href='products';">
                         <img src="images/acoustic-guitar-licensable.png" id="acoustic-guitar" alt="acoustic guitar"
                             class="img-fluid">
@@ -84,8 +86,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-xl-3 col-md-4 col-sm-6 col-xs-6 d-flex align-items-center" id="card-wrapper">
+                <div class="carousel-item">
                     <div class="card" onclick="location.href='products';">
                         <img src="images/trumpet-licensable.jpg" id="trumpet" alt="trumpet" class="img-fluid">
                         <div class="card-body text-center">
@@ -93,8 +94,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-xl-3 col-md-4 col-sm-6 col-xs-6 d-flex align-items-center" id="card-wrapper">
+                <div class="carousel-item">
                     <div class="card" onclick="location.href='products';">
                         <img src="images/drums-licensable.png" id="drums" alt="drums" class="img-fluid">
                         <div class="card-body text-center">
@@ -102,8 +102,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-xl-3 col-md-4 col-sm-6 col-xs-6 d-flex align-items-center" id="card-wrapper">
+                <div class="carousel-item">
                     <div class="card" onclick="location.href='products';">
                         <img src="images/grand_piano_licensable.png" id="grandpiano" alt="grandpiano" class="img-fluid">
                         <div class="card-body text-center">
@@ -111,8 +110,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-xl-3 col-md-4 col-sm-6 col-xs-6 d-flex align-items-center" id="card-wrapper">
+                <div class="carousel-item">
                     <div class="card" onclick="location.href='products';">
                         <img src="images/bass-guitar-licensable.png" id="bass-guitar" alt="bass guitar"
                             class="img-fluid">
@@ -121,25 +119,22 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="images/carousel-images/placeholder-1.png" class="d-block w-100" alt="">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/carousel-images/placeholder-2.png" class="d-block w-100" alt="">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only"></span>
-                    </a>
-                </div>
+        <div class="container">
+            <div class="row">
+                <img src="images/carousel-images/placeholder-1.png" class="d-block w-100" alt="">
+            </div>
+        </div>
     </section>
 
     <!--Cart Button-->
