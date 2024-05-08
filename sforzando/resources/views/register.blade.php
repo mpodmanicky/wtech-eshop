@@ -46,7 +46,12 @@
                         <div class="card-body">
                             <form action="">
                                 <div class="mb-3">
-                                    <label for="username" class="form-label">Email</label>
+                                    <label for="name" class="form-label">Meno</label>
+                                    <input type="text" class="form-control" id="name"
+                                        placeholder="Meno">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
                                     <input type="text" class="form-control" id="email"
                                         placeholder="Email">
                                 </div>
