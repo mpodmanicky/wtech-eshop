@@ -10,16 +10,10 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href={{asset('css/styles.css')}}>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
     <title>Sforzando</title>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src='js/index.js'></script>
     <!--Header and navigation-->
     <nav class="navbar navbar-expand-md">
         <div class="container">
@@ -58,18 +52,17 @@
             </form>
             <div class="navbar" id="side">
                 @if(Auth::check())
-                    <a href="#" id="login-icon"><i class="bi bi-person" type="button"></i>{{ Auth::user()->name }}</a>
-                    <a href="{{ route('logout') }}" class="nav-link"
-                    onclick="event.preventDefault();
+                <a href="#" id="login-icon"><i class="bi bi-person" type="button"></i>{{ Auth::user()->name }}</a>
+                <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                        &nbsp;Logout
-                    </a>
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
+                    &nbsp;Logout
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
                 @else
-                    <a href="{{ route('login') }}" id="login-icon"><i class="bi bi-person" type="button"></i></a>
-                    <a href="{{ route('login') }}" class="nav-link">Login</a>
+                <a href="{{ route('login') }}" id="login-icon"><i class="bi bi-person" type="button"></i></a>
+                <a href="{{ route('login') }}" class="nav-link">Login</a>
                 @endif
             </div>
         </div>
@@ -79,7 +72,7 @@
     <!--Categories in carousel-->
     <section class="p-5">
 
-        <div id="categoriesCarousel" class="carousel slide">
+        <div id="categoriesCarousel" class="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="card" onclick="location.href='products';">
@@ -143,9 +136,7 @@
         </div>
 
         <div class="container">
-            <div class="row">
-                <img src="images/carousel-images/placeholder-1.png" class="d-block w-100" alt="">
-            </div>
+            <img src="images/carousel-images/placeholder-1.png" class="d-block w-100" alt="">
         </div>
     </section>
 
@@ -155,6 +146,13 @@
             <i class="bi bi-cart2"></i>
         </a>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src='js/index.js'></script>
 
 </body>
 <footer class="bg-body-tertiary text-lg-start mt-auto">

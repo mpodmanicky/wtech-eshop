@@ -1,7 +1,13 @@
-$(document).ready(function () {
-  const Hello = function () {
-    console.log("Hello World!");
-  };
+const Hello = function () {
+  console.log("Hello World!");
+};
+
+const multipleItemCarousel = document.getElementById("categoriesCarousel");
+
+if (window.matchMedia('(min-width: 768px)').matches) {
+  const carousel = new bootstrap.Carousel(multipleItemCarousel, {
+    interval: false,
+  });
 
   var carouselWidth = $(".carousel-inner").prop('scrollWidth');
   var cardWidth = $(".carousel-item").width();
@@ -25,4 +31,6 @@ $(document).ready(function () {
         600); //scroll left 
     }
   });
-});
+} else {
+  multipleItemCarousel.classList.add("slide");
+}
