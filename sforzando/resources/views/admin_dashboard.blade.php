@@ -11,9 +11,7 @@
     <div class="sidebar">
         <h1>Admin</h1>
     <a href="#"><i class="fas fa-home"></i> Dashboard</a>
-    <a href="#"><i class="fas fa-user"></i> Users</a>
     <a href="#"><i class="fas fa-file"></i> Products</a>
-    <a href="#"><i class="fas fa-cog"></i> Settings</a>
 
     </div>
 
