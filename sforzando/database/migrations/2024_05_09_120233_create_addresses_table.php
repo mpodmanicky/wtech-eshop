@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id('id');
             $table->string('country');
              // tooto musi byt enum, este musim pozriet ze jako
-             $table->string('city');
-             $table->string('street');
-             $table->string('postal_code');
-             $table->id('user_id');
+            $table->string('city');
+            $table->string('street');
+            $table->string('postal_code');
+            $table->foreignId('user_id')->constrained('users');
         });
     }
 

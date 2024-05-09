@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('descriptions', function (Blueprint $table) {
             $table->id('id');
-            $table->id('product_id');
+            $table->foreignId('product_id')->constrained('products');
             $table->text('description');
         });
     }
