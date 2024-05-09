@@ -57,8 +57,20 @@
                 </a>
             </form>
             <div class="navbar" id="side">
-                <a href="login" id="login-icon"><i class="bi bi-person" type="button"></i></a>
-                <a href="login" class="nav-link">Login</a>
+                @if(Auth::check())
+                    <a href="#" id="login-icon"><i class="bi bi-person" type="button"></i>{{ Auth::user()->name }}</a>
+                    <a href="{{ route('logout') }}" class="nav-link"
+                    onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                        &nbsp;Logout
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                @else
+                    <a href="{{ route('login') }}" id="login-icon"><i class="bi bi-person" type="button"></i></a>
+                    <a href="{{ route('login') }}" class="nav-link">Login</a>
+                @endif
             </div>
         </div>
     </nav>
