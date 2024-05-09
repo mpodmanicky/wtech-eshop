@@ -72,7 +72,7 @@
     <!--Categories in carousel-->
     <section class="p-5">
 
-        <div id="categoriesCarousel" class="carousel">
+        <div id="categoriesCarousel" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="card" onclick="location.href='products';">
@@ -125,11 +125,13 @@
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#categoriesCarousel"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#categoriesCarousel"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -149,9 +151,11 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
     <script src='js/index.js'></script>
 
 </body>

@@ -1,7 +1,3 @@
-const Hello = function () {
-  console.log("Hello World!");
-};
-
 const multipleItemCarousel = document.getElementById("categoriesCarousel");
 
 if (window.matchMedia('(min-width: 768px)').matches) {
@@ -9,7 +5,7 @@ if (window.matchMedia('(min-width: 768px)').matches) {
     interval: false,
   });
 
-  var carouselWidth = $(".carousel-inner").prop('scrollWidth');
+  var carouselWidth = $(".carousel-inner")[0].scrollWidth;
   var cardWidth = $(".carousel-item").width();
 
   var scrollPosition = 0;
@@ -32,5 +28,5 @@ if (window.matchMedia('(min-width: 768px)').matches) {
     }
   });
 } else {
-  multipleItemCarousel.classList.add("slide");
+  $(multipleItemCarousel).addClass('slide');
 }
