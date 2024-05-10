@@ -126,7 +126,7 @@
     <div class="container">
         <div class="row" style="justify-content: space-evenly;">
             @foreach ($products as $product)
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card" onclick="location.href='product_detail'">
                     <img src="images/grand_piano_licensable.png" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
