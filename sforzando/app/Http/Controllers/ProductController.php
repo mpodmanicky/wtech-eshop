@@ -19,6 +19,9 @@ class ProductController extends Controller
     }
 
     public function store(Request $request) {
+        
+        echo $request;
+        
         $request->validate([
             'name' => 'required|max:255',
             'description' => 'required',
@@ -29,7 +32,7 @@ class ProductController extends Controller
             'available_stock' => 'required|integer',
         ]);
         
-        $product = Product::create([
+        $product = DB::table('products')->insert([
             'name' => $request->name,
             'category' => $request->category,
             'price' => $request->price,
