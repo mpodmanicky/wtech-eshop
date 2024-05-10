@@ -27,7 +27,9 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
-
+        
+        // this line is added to redirect to the intended page after login
+        // modify the intended path later on
         return redirect()->intended('/');
     }
 
