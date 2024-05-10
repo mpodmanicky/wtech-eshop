@@ -17,5 +17,9 @@ class ProductController extends Controller
         return view('products', ['products' => $products]);
     }
 
+    public function store(Request $request) {
+        // placeholder
+    }
+
 
 }

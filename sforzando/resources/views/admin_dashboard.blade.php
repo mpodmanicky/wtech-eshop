@@ -1,5 +1,3 @@
-<!--Made by Martin Podmanicky, Dominik Tulach-->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,59 +8,59 @@
 <body>
     <div class="sidebar">
         <h1>Admin</h1>
-    <a href="#"><i class="fas fa-home"></i> Dashboard</a>
-    <a href="#"><i class="fas fa-file"></i> Products</a>
-    <div class="sidebar">
-        <h1>Admin</h1>
         <a href="#"><i class="fas fa-home"></i> Dashboard</a>
         <a href="#"><i class="fas fa-file"></i> Products</a>
-        <form method="POST" action="{{ route('logout') }}">
-            @csrf
-            <a href="#" onclick="this.closest('form').submit();"><i class="fas fa-sign-out-alt"></i> Logout</a>
-        </form>
-    </div>
-
+        <div class="sidebar">
+            <h1>Admin</h1>
+            <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="#"><i class="fas fa-file"></i> Products</a>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <a href="#" onclick="this.closest('form').submit();"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </form>
+        </div>
     </div>
 
     <div class="content">
-    <select id="productSelect">
-        <!-- Add options for products here -->
-        <option value="klavir_petrof">Grand klavír - Petrof</option>
-    </select>
+        <form method="POST" action="{{ route('product.store') }}" enctype="multipart/form-data">
+            @csrf
 
-    <button id="removeButton">Remove</button>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
 
-    <a href="admin_page_modify.html">
-        <button id="modifyButton">Modify</button>
-    </a>
-    <br><br><br>
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="6" cols="40"></textarea><br><br>
 
-    
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name"><br><br>
+            <label for="category">Category:</label>
+            <select id="category" name="category">
+                <option value="elektricke_gitary">Elektrické gitary</option>
+                <option value="akusticke_gitary">Akustické gitary</option>
+                <option value="dychove_nastroje">Dychové nástroje</option>
+                <option value="bicie_nastroje">Bicie nástroje</option>
+                <option value="klaviry">Klavíry</option>
+                <option value="basgitary">Basgitary</option>
+            </select>
+            <br><br>
 
-    <label for="description">Description:</label><br>
-    <textarea id="description" name="description" rows="6" cols="40"></textarea><br><br>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" step="0.01"><br><br>
 
-    <label for="category">Category:</label>
-    <select id="category" name="category">
-        <option value="elektricke_gitary">Elektrické gitary</option>
-        <option value="akusticke_gitary">Akustické gitary</option>
-        <option value="dychove_nastroje">Dychové nástroje</option>
-        <option value="bicie_nastroje">Bicie nástroje</option>
-        <option value="klaviry">Klavíry</option>
-        <option value="basgitary">Basgitary</option>
-    </select>
+            <label for="color">Color:</label>
+            <input type="text" id="color" name="color"><br><br>
 
-    <br><br>
+            <label for="brand">Brand:</label>
+            <input type="text" id="brand" name="brand"><br><br>
 
-    <label for="image">Image:</label>
-    <input type="file" id="image" name="image"><br><br>
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" name="stock"><br><br>
 
-    <label for="image2">Image 2:</label>
-    <input type="file" id="image2" name="image2"><br><br>
-</div>
+            <br><br>
 
-    <button id="addButton">Add</button>
+            <label for="images">Images:</label>
+            <input type="file" id="images" name="images[]" multiple><br><br>
 
-    
+            <button type="submit" id="addButton">Add product</button>
+        </form>
+    </div>
+</body>
+</html>

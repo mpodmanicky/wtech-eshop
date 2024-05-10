@@ -1,6 +1,4 @@
 <!--Made by Martin Podmanicky, Dominik Tulach-->
-
-<!--Made by Martin Podmanicky, Dominik Tulach-->
 <!DOCTYPE html>
 <html>
 
@@ -41,3 +39,4 @@
     <a href="admin_page.html">
         <button id="modifyButton">Modify</button>
     </a>
+</body>
