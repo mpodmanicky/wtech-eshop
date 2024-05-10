@@ -19,10 +19,7 @@ class ProductController extends Controller
     }
 
     public function store(Request $request) {
-        
-        echo $request;
-        
-        $request->validate([
+        /*$request->validate([
             'name' => 'required|max:255',
             'description' => 'required',
             'category' => 'required',
@@ -30,24 +27,23 @@ class ProductController extends Controller
             'color' => 'required|max:255',
             'brand' => 'required|max:255',
             'available_stock' => 'required|integer',
+        ]);*/
+        
+        $description = Description::create([
+            'description' => $request->description,
         ]);
         
-        $product = DB::table('products')->insert([
+        $product = Product::create([
             'name' => $request->name,
             'category' => $request->category,
             'price' => $request->price,
             'color' => $request->color,
             'brand' => $request->brand,
             'available_stock' => $request->available_stock,
+            'description_id' => $description->id,
         ]);
-
-        Log::info('Product created: ', ['product' => $product->toArray()]);
         
-        $description = $product->description()->create([
-            'description' => $request->description,
-        ]);
-
-        Log::info('Description created: ', ['description' => $description->toArray()]);
+        Log::info('Product created: ', ['product' => $product->toArray()]);
         
         return response()->json(['success' => 'Product created successfully.', 'product' => $product], 201);
     }
