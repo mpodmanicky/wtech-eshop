@@ -147,6 +147,19 @@
         </div>
     </div>
 
+    @if (count($products) == 0)
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center">Nenašli sa žiadne produkty</h1>
+            </div>
+        </div>
+    @endif
+
+    <div class="d-flex justify-content-center mt-4">
+        {{ $products->links() }}
+    </div>
+
     <!--Cart Button-->
     <div class="cart-button">
         <a href="cart" class="btn btn-primary btn-lg" id="cart-button">
@@ -154,7 +167,6 @@
         </a>
     </div>
 </body>
-<br>
 
 <footer class="bg-body-tertiary text-lg-start mt-auto">
     <div class="container p-3">

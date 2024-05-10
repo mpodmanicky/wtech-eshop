@@ -30,10 +30,10 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="about_us.html" class="nav-link">O nás</a>
+                        <a href="about_us" class="nav-link">O nás</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link">Kontakt</a>
+                        <a href="contact" class="nav-link">Kontakt</a>
                     </li>
                 </ul>
             </div>

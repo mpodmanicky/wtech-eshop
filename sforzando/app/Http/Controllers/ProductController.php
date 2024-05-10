@@ -16,8 +16,8 @@ class ProductController extends Controller
 
         // pagination, ak chcem vsetky produkty, tak paginate(all)
         $products = Product::paginate(12);
-        return view('products');
+        return view('products', ['products' => $products]);
     }
 
-    
+
 }
