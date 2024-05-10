@@ -18,7 +18,7 @@
     <!--Header and navigation-->
     <nav class="navbar navbar-expand-md">
         <div class="container">
-            <a href="index.html" class="navbar-brand">SFORZANDO</a>
+            <a href="index" class="navbar-brand">SFORZANDO</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -64,7 +64,7 @@
                                     <input type="password" class="form-control" id="heslo-2" placeholder="Heslo">
                                 </div>
                                 <div class="text-center mt-3">
-                                    <a href="login.html">
+                                    <a href="login">
                                         <button type="button" class="btn btn-primary">Registrácia</button>
                                     </a>
                                 </div>

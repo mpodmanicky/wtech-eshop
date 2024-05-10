@@ -109,7 +109,7 @@
             <div class="col-md-4 divider d-flex justify-content-center align-items-center">
                 <!-- Tlačidlo pre pokračovanie -->
                 <div class="text-center">
-                    <a href="platba.html" class="btn btn-primary">Pokračovať</a>
+                    <a href="payment" class="btn btn-primary">Pokračovať</a>
                 </div>
             </div>
         </div>
