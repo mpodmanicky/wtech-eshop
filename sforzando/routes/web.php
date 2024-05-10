@@ -3,12 +3,13 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/products', 'ProductController@products')->name('products');
+Route::get('/products', [ProductController::class, 'index'])->name('products');
 
 Route::get('/about_us', function () {
     return view('about_us');

@@ -13,6 +13,10 @@ class ProductController extends Controller
 
         $products = Products::where('category', $category)->get();
 
-        return view('products', compact('products'));
+        return view('products');
+    }
+
+    public function index() {
+        return view('products');
     }
 }
