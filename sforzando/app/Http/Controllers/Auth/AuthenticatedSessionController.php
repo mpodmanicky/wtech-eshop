@@ -27,6 +27,10 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
+
+        if ($request->user()->type_id === 1) {
+            return redirect()->intended('/admin/dashboard');
+        }
         
         // this line is added to redirect to the intended page after login
         // modify the intended path later on
