@@ -7,6 +7,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('products', function () {
+    return view('products');
+});
+
 Route::get('/about_us', function () {
     return view('about_us');
 });

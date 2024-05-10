@@ -75,54 +75,85 @@
         <div id="categoriesCarousel" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="card" onclick="location.href='products';">
-                        <img src="images/guitar_licensable.png" id="guitar" alt="guitar" class="img-fluid">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Elektrické gitary</h5>
+                    <from action="{{ route('products') }}" method="POST">
+                        @csrf
+                        <div class="card"
+                            onclick="document.getElementById('categoryInput').value = this.dataset.category">
+                            <img src="images/guitar_licensable.png" id="guitar" alt="guitar" class="img-fluid">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Elektrické gitary</h5>
+                            </div>
                         </div>
-                    </div>
+                        <input type="hidden" name="category" id="categoryInput" value="electric_guitar">
+                    </from>
                 </div>
                 <div class="carousel-item">
-                    <div class="card" onclick="location.href='products';">
-                        <img src="images/acoustic-guitar-licensable.png" id="acoustic-guitar" alt="acoustic guitar"
-                            class="img-fluid">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Akustické gitary</h5>
+                    <from action="{{ route('products') }}" method="POST">
+                        @csrf
+                        <div class="card"
+                            onclick="document.getElementById('categoryInput').value = this.dataset.category">
+                            <img src="images/acoustic-guitar-licensable.png" id="acoustic-guitar" alt="acoustic guitar"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Akustické gitary</h5>
+                            </div>
+                            <input type="hidden" name="category" id="categoryInput" value="acoustic_guitar">
                         </div>
-                    </div>
+                    </from>
                 </div>
                 <div class="carousel-item">
-                    <div class="card" onclick="location.href='products';">
-                        <img src="images/trumpet-licensable.jpg" id="trumpet" alt="trumpet" class="img-fluid">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Dychové nástroje</h5>
+                    <from action="{{ route('products') }}" method="POST">
+                        @csrf
+                        <div class="card"
+                            onclick="document.getElementById('categoryInput').value = this.dataset.category">
+                            <img src="images/trumpet-licensable.jpg" id="trumpet" alt="trumpet" class="img-fluid">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Dychové nástroje</h5>
+                            </div>
+                            <input type="hidden" name="category" id="categoryInput" value="trumpet">
                         </div>
-                    </div>
+                    </from>
                 </div>
                 <div class="carousel-item">
-                    <div class="card" onclick="location.href='products';">
-                        <img src="images/drums-licensable.png" id="drums" alt="drums" class="img-fluid">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Bicie nástroje</h5>
+                    <from action="{{ route('products') }}" method="POST">
+                        @csrf
+                        <div class="card"
+                            onclick="document.getElementById('categoryInput').value = this.dataset.category">
+                            <img src="images/drums-licensable.png" id="drums" alt="drums" class="img-fluid">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Bicie nástroje</h5>
+                            </div>
+                            <input type="hidden" name="category" id="categoryInput" value="drums">
                         </div>
-                    </div>
+                    </from>
                 </div>
                 <div class="carousel-item">
-                    <div class="card" onclick="location.href='products';">
-                        <img src="images/grand_piano_licensable.png" id="grandpiano" alt="grandpiano" class="img-fluid">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Klavíry</h5>
+                    <from action="{{ route('products') }}" method="POST">
+                        @csrf
+                        <div class="card"
+                            onclick="document.getElementById('categoryInput').value = this.dataset.category">
+                            <img src="images/grand_piano_licensable.png" id="grandpiano" alt="grandpiano"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Klavíry</h5>
+                            </div>
+                            <input type="hidden" name="category" id="categoryInput" value="piano">
                         </div>
-                    </div>
+                    </from>
                 </div>
                 <div class="carousel-item">
-                    <div class="card" onclick="location.href='products';">
-                        <img src="images/bass-guitar-licensable.png" id="bass-guitar" alt="bass guitar"
-                            class="img-fluid">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Basgitary</h5>
+                    <from action="{{ route('products') }}" method="POST">
+                        @csrf
+                        <div class="card"
+                            onclick="document.getElementById('categoryInput').value = this.dataset.category">
+                            <img src="images/bass-guitar-licensable.png" id="bass-guitar" alt="bass guitar"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Basgitary</h5>
+                            </div>
+                            <input type="hidden" name="category" id="categoryInput" value="bass_guitar">
                         </div>
-                    </div>
+                    </from>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#categoriesCarousel"
