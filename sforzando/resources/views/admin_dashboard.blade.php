@@ -12,6 +12,15 @@
         <h1>Admin</h1>
     <a href="#"><i class="fas fa-home"></i> Dashboard</a>
     <a href="#"><i class="fas fa-file"></i> Products</a>
+    <div class="sidebar">
+        <h1>Admin</h1>
+        <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+        <a href="#"><i class="fas fa-file"></i> Products</a>
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <a href="#" onclick="this.closest('form').submit();"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </form>
+    </div>
 
     </div>
 
