@@ -72,67 +72,100 @@
     <!--Categories in carousel-->
     <section class="p-5">
 
-        <div id="categoriesCarousel" class="carousel slide">
+        <div id="categoriesCarousel" class="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="card" onclick="location.href='products';">
-                        <img src="images/guitar_licensable.png" id="guitar" alt="guitar" class="img-fluid">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Elektrické gitary</h5>
+                    <form action="{{ route('products') }}" method="GET">
+                        @csrf
+                        <div class="card">
+                            <img src="images/guitar_licensable.png" id="guitar" alt="guitar" class="img-fluid">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Elektrické gitary</h5>
+                            </div>
+                            <input type="hidden" name="category" value="electric_guitar">
                         </div>
-                    </div>
+                        <button type="submit">Zobraziť produkty</button>
+                    </form>
                 </div>
                 <div class="carousel-item">
-                    <div class="card" onclick="location.href='products';">
-                        <img src="images/acoustic-guitar-licensable.png" id="acoustic-guitar" alt="acoustic guitar"
-                            class="img-fluid">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Akustické gitary</h5>
+                    <form action="{{ route('products') }}" method="GET">
+                        @csrf
+                        <div class="card">
+                            <img src="images/acoustic-guitar-licensable.png" id="acoustic-guitar" alt="acoustic guitar"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Akustické gitary</h5>
+                            </div>
+                            <input type="hidden" name="category" value="acoustic_guitar">
                         </div>
-                    </div>
+                        <button type="submit">Zobraziť produkty</button>
+                    </form>
                 </div>
                 <div class="carousel-item">
-                    <div class="card" onclick="location.href='products';">
-                        <img src="images/trumpet-licensable.jpg" id="trumpet" alt="trumpet" class="img-fluid">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Dychové nástroje</h5>
+                    <form action="{{ route('products') }}" method="GET">
+                        @csrf
+                        <div class="card">
+                            <img src="images/trumpet-licensable.jpg" id="trumpet" alt="trumpet" class="img-fluid">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Dychové nástroje</h5>
+                            </div>
+                            <input type="hidden" name="category" value="brass_instruments">
                         </div>
-                    </div>
+                        <button type="submit">Zobraziť produkty</button>
+                    </form>
                 </div>
                 <div class="carousel-item">
-                    <div class="card" onclick="location.href='products';">
-                        <img src="images/drums-licensable.png" id="drums" alt="drums" class="img-fluid">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Bicie nástroje</h5>
+                    <form action="{{ route('products') }}" method="GET">
+                        @csrf
+                        <div class="card">
+                            <img src="images/drums-licensable.png" id="drums" alt="drums" class="img-fluid">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Bicie nástroje</h5>
+                            </div>
+                            <input type="hidden" name="category" value="drums">
                         </div>
-                    </div>
+                        <button type="submit">Zobraziť produkty</button>
+                    </form>
                 </div>
                 <div class="carousel-item">
-                    <div class="card" onclick="location.href='products';">
-                        <img src="images/grand_piano_licensable.png" id="grandpiano" alt="grandpiano" class="img-fluid">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Klavíry</h5>
+                    <form action="{{ route('products') }}" method="GET">
+                        @csrf
+                        <div class="card">
+                            <img src="images/grand_piano_licensable.png" id="grandpiano" alt="grandpiano"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Klavíry</h5>
+                            </div>
+                            <input type="hidden" name="category" value="piano">
                         </div>
-                    </div>
+                        <button type="submit">Zobraziť produkty</button>
+                    </form>
                 </div>
                 <div class="carousel-item">
-                    <div class="card" onclick="location.href='products';">
-                        <img src="images/bass-guitar-licensable.png" id="bass-guitar" alt="bass guitar"
-                            class="img-fluid">
-                        <div class="card-body text-center">
-                            <h5 class="card-title">Basgitary</h5>
+                    <form action="{{ route('products') }}" method="GET">
+                        @csrf
+                        <div class="card">
+                            <img src="images/bass-guitar-licensable.png" id="bass-guitar" alt="bass guitar"
+                                class="img-fluid">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Basgitary</h5>
+                            </div>
+                            <input type="hidden" name="category" value="bass_guitar">
                         </div>
-                    </div>
+                        <button type="submit">Zobraziť produkty</button>
+                    </form>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#categoriesCarousel"
                 data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
+                <span class="carousel-control-prev-icon" aria-hidden="true"
+                    style="background-color: black; border-radius: 5px;"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#categoriesCarousel"
                 data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
+                <span class="carousel-control-next-icon" aria-hidden="true"
+                    style="background-color: black; border-radius: 5px;"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
