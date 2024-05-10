@@ -11,11 +11,9 @@ class ProductController extends Controller
     public function index(Request $request) {
 
         $category = $request->input('category');
+        
+        $products = $category ? Product::where('category', $category)->paginate(12) : collect();
 
-        $products = Product::where('category', $category)->get();
-
-        // pagination, ak chcem vsetky produkty, tak paginate(all)
-        $products = Product::paginate(12);
         return view('products', ['products' => $products]);
     }
 

@@ -14,12 +14,14 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->text('description');
+            $table->foreignId('description_id');
             $table->decimal('price', 8, 2);
             $table->string('color');
             $table->string('category');
             $table->string('brand');
             $table->decimal('available_stock', 8, 2);
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
         });
     }
 

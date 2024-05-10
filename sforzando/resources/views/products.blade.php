@@ -134,7 +134,7 @@
                         <div class="row">
                             <div class="col">
                                 <h3>{{$product->price}} € s DPH</h3>
-                                <p>{{$product->price_without_vat}} € bez DPH</p>
+                                <p>{{$product->price * 0.8}} € bez DPH</p>
                             </div>
                             <div class="col">
                                 <a href="#" class="btn btn-primary">Pridať do košíka</a>

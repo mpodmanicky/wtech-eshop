@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id('id');
             $table->foreignId('product_id')->constrained('products');
             $table->text('description');
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
         });
     }
 
