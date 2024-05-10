@@ -9,6 +9,8 @@ class Description extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['content'];
+
     protected $table = ('descriptions');
     protected $primaryKey = 'id';
 }

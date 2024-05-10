@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Description;
 
 class ProductController extends Controller
 {
@@ -18,7 +19,34 @@ class ProductController extends Controller
     }
 
     public function store(Request $request) {
-        // placeholder
+        $request->validate([
+            'name' => 'required|max:255',
+            'description' => 'required',
+            'category' => 'required',
+            'price' => 'required|numeric',
+            'color' => 'required|max:255',
+            'brand' => 'required|max:255',
+            'available_stock' => 'required|integer',
+        ]);
+        
+        $product = Product::create([
+            'name' => $request->name,
+            'category' => $request->category,
+            'price' => $request->price,
+            'color' => $request->color,
+            'brand' => $request->brand,
+            'available_stock' => $request->available_stock,
+        ]);
+
+        Log::info('Product created: ', ['product' => $product->toArray()]);
+        
+        $description = $product->description()->create([
+            'description' => $request->description,
+        ]);
+
+        Log::info('Description created: ', ['description' => $description->toArray()]);
+        
+        return response()->json(['success' => 'Product created successfully.', 'product' => $product], 201);
     }
 
 
