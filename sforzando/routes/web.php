@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SearchController;
 
 Route::get('/', function () {
     return view('index');
@@ -12,6 +13,8 @@ Route::get('/', function () {
 Route::get('/home', function() {
     return view('index');
 });
+
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 Route::get('/products', [ProductController::class, 'index'])->name('products');
 

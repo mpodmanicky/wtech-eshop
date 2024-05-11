@@ -21,7 +21,7 @@
     <!--Header and navigation-->
     <nav class="navbar navbar-expand-md">
         <div class="container">
-            <a href="index.html" class="navbar-brand">SFORZANDO</a>
+            <a href="/" class="navbar-brand">SFORZANDO</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -30,10 +30,10 @@
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a href="about_us.html" class="nav-link">O nás</a>
+                        <a href="about_us" class="nav-link">O nás</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link">Kontakt</a>
+                        <a href="contact" class="nav-link">Kontakt</a>
                     </li>
                 </ul>
             </div>
@@ -43,18 +43,18 @@
     <!--Search bar and login-->
     <nav class="navbar" id="main">
         <div class="container">
-            <form class="d-flex" role="search">
+            <form class="d-flex" role="search" action="{{route('search')}}" method="GET">
                 <div class="input-group">
                     <span id="basic-addon1" class="input-group-text">
                         <i class="bi bi-search"></i>
                     </span>
-                    <input class="form-control" type="search" placeholder="Zadajte názov produktu" aria-label="Search">
+                    <input class="form-control" name="search" type="search" placeholder="Zadajte názov produktu" aria-label="Search">
                 </div>
                 <button class="btn btn-outline-secondary" type="submit">Vyhľadať</button>
             </form>
             <div class="navbar" id="side">
-                <a href="login.html" id="login-icon"><i class="bi bi-person" type="button"></i></a>
-                <a href="login.html" class="nav-link">Login</a>
+                <a href="login" id="login-icon"><i class="bi bi-person" type="button"></i></a>
+                <a href="login" class="nav-link">Login</a>
             </div>
         </div>
     </nav>
@@ -114,6 +114,7 @@
 
     <div class="container">
         <div class="row" style="justify-content: space-evenly;">
+            @if (count($products) > 0)
             @foreach ($products as $product)
             <div class="col-md-4">
                 <div class="card" onclick="location.href='product_detail'">
@@ -133,20 +134,17 @@
                 </div>
             </div>
             @endforeach
-        </div>
-    </div>
-
-    @if (count($products) == 0)
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1 class="text-center">Nenašli sa žiadne produkty</h1>
+            {{ $products->links() }}
+            @else
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-center">Nenašli sa žiadne produkty</h1>
+                    </div>
+                </div>
             </div>
+            @endif
         </div>
-    @endif
-
-    <div class="d-flex justify-content-center mt-4">
-        {{ $products->links() }}
     </div>
 
     <!--Cart Button-->

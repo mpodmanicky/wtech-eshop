@@ -39,16 +39,14 @@
     <!--Search bar and login-->
     <nav class="navbar" id="main">
         <div class="container">
-            <form class="d-flex" role="search">
+            <form class="d-flex" role="search" action="{{route('search')}}" method="GET">
                 <div class="input-group">
                     <span id="basic-addon1" class="input-group-text">
                         <i class="bi bi-search"></i>
                     </span>
-                    <input class="form-control" type="search" placeholder="Zadajte názov produktu" aria-label="Search">
+                    <input class="form-control" name="search" type="search" placeholder="Zadajte názov produktu" aria-label="Search">
                 </div>
-                <a href="products">
-                    <button class="btn btn-outline-secondary" type="button">Vyhľadať</button>
-                </a>
+                <button class="btn btn-outline-secondary" type="submit">Vyhľadať</button>
             </form>
             <div class="navbar" id="side">
                 @if(Auth::check())

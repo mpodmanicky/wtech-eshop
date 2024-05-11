@@ -1,33 +1,32 @@
 <?php
-
+//Martin Podmanicky
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
+use Illuminate\Database\Eloquent\Builder;
 
 class SearchController extends Controller
 {
     // Search Controller
 
-    public function search(Request $request): View {
+    public function search(Request $request) {
 
-        $q = $request->input('query');
+        $searchTerm = $request->input('search');
 
-        $query = Product::query()->latest()->select(['id', 'name', 'category', 'price', 'color', 'brand', 'available_stock']);
+        $searchTerm = '%' . $searchTerm . '%'; // Wildcard
 
-        $words = explode(' ', $q);
-        foreach ($words as $term) {
-            $word = Sanitize::sanitize($term);
+        // Here, possible sanitazion of the search term could be done
 
-            $word = str_replace(['%', "_"], ['\\%', '\\_'], $word);
+        // and even prevetion from SQL injection
 
-            $searchTerm = '%' . $word . '%';
+        $products = Product::where(function (Builder $subQuery) use ($searchTerm) {
+            $subQuery->whereRaw("LOWER(name) like LOWER(?)", [$searchTerm])
+                 ->orWhereRaw("LOWER(brand) like LOWER(?)", [$searchTerm])
+                 ->orWhereRaw("LOWER(category) like LOWER(?)", [$searchTerm]);
+        })->paginate(12);
 
-            $query->where(function (Builder $subQuery) use ($searchTerm) {
-                $subQuery->where('name','like',$searchTerm)->orWhere('brand','like',$searchTerm)->orWhere('category','like',$searchTerm);
-            });
-        };
-
-        return view('products', ['products' => $query->paginate()]);
+        return view('products', ['products' => $products]);
 
     }
 }
