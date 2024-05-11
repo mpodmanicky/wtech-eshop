@@ -58,7 +58,7 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 route::get('/admin/dashboard', [HomeController::class, 'index'])->
-    middleware(['auth', 'admin']);
+    middleware(['auth', 'admin'])->name('admin.dashboard');
 
 Route::post('/product/store', [ProductController::class, 'store'])->name('product.store');
 
