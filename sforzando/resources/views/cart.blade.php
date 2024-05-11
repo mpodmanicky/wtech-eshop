@@ -57,21 +57,27 @@
                     <h2>Košík</h2>
                     <!-- Čiara -->
                     <hr class="line">
-                    <div class="productRow">
+                    @if (session()->has('cart'))
+                    @foreach (session('cart') as $cartItem)
+                        <div class="productRow">
                             <div class="productMiniature">
-                                <h3>{{$product->name}}</h3>
+                                <h3>{{ $cartItem['name'] }}</h3>
                                 <img src='images/grand-piano.png' alt="Image">
                             </div>
                             <div class="productInfo">
-                                <p>{{$product->price}} €</p>
+                                <p>{{ $cartItem['price']*$cartItem['quantity'] }} €</p>
                                 <div id="modify-buttons">
-                                <button class="removeButton">Odobrať</button>
-                                <button class="plusButton"><i class='bi bi-plus'></i></button>
-                                <button class="minusButton"><i class='bi bi-dash'></i></button>
+                                    <button class="removeButton" data-product-id="{{ $cartItem['id'] }}">Odobrať</button>
+                                    <button class="plusButton" data-product-id="{{ $cartItem['id'] }}"><i class='bi bi-plus'></i></button>
+                                    <button class="minusButton" data-product-id="{{ $cartItem['id'] }}"><i class='bi bi-dash'></i></button>
                                 </div>
+                                <span id="quantity-{{ $cartItem['id'] }}">{{ $cartItem['quantity'] }}</span>
                             </div>
-                    </div>
-                </div>
+                        </div>
+                    @endforeach
+                @else
+                    <p>Váš košík je prázdny.</p>
+                @endif
             <div class="col-md-4 divider d-flex justify-content-center align-items-center">
                 <!-- Tlačidlo pre pokračovanie -->
                 <div class="text-center">

@@ -124,7 +124,7 @@
                             </a>
                             </div>
                             <div class="col">
-                                <a href="/cart/{{$product->id}}">
+                                <a href="/cart/buyNow/{{$product->id}}">
                                     <button type="button" class="btn btn-secondary">
                                         Kúpiť ihneď
                                     </button>
