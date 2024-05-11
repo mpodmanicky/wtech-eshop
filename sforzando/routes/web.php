@@ -66,3 +66,6 @@ Route::get('/admin/products', [ProductController::class, 'adminIndex'])->name('a
 
 Route::delete('/admin/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
 
+Route::get('/admin/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
+
+Route::put('/admin/products/{product}', [ProductController::class, 'update'])->name('products.update');

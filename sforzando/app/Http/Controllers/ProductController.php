@@ -56,5 +56,28 @@ class ProductController extends Controller
         return redirect()->route('admin.products')->with('success', 'Product deleted successfully');
     }
 
+    public function edit($id)
+    {
+        $product = Product::find($id);
+
+        return view('admin_dashboard_modify', compact('product'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $product = Product::find($id);
+
+        $product->name = $request->input('name');
+        $product->description = $request->input('description');
+        $product->category = $request->input('category');
+        $product->price = $request->input('price');
+        $product->color = $request->input('color');
+        $product->brand = $request->input('brand');
+        $product->available_stock = $request->input('available_stock');
+
+        $product->save();
+
+        return redirect()->route('admin.products');
+    }
 
 }
