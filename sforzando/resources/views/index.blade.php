@@ -83,8 +83,8 @@
                                 <h5 class="card-title">Elektrické gitary</h5>
                             </div>
                             <input type="hidden" name="category" value="electric_guitar">
+                            <button type="submit">Zobraziť produkty</button>
                         </div>
-                        <button type="submit">Zobraziť produkty</button>
                     </form>
                 </div>
                 <div class="carousel-item">
@@ -97,8 +97,8 @@
                                 <h5 class="card-title">Akustické gitary</h5>
                             </div>
                             <input type="hidden" name="category" value="acoustic_guitar">
+                            <button type="submit">Zobraziť produkty</button>
                         </div>
-                        <button type="submit">Zobraziť produkty</button>
                     </form>
                 </div>
                 <div class="carousel-item">
@@ -110,8 +110,8 @@
                                 <h5 class="card-title">Dychové nástroje</h5>
                             </div>
                             <input type="hidden" name="category" value="brass_instruments">
+                            <button type="submit">Zobraziť produkty</button>
                         </div>
-                        <button type="submit">Zobraziť produkty</button>
                     </form>
                 </div>
                 <div class="carousel-item">
@@ -123,8 +123,8 @@
                                 <h5 class="card-title">Bicie nástroje</h5>
                             </div>
                             <input type="hidden" name="category" value="drums">
+                            <button type="submit">Zobraziť produkty</button>
                         </div>
-                        <button type="submit">Zobraziť produkty</button>
                     </form>
                 </div>
                 <div class="carousel-item">
@@ -137,8 +137,8 @@
                                 <h5 class="card-title">Klavíry</h5>
                             </div>
                             <input type="hidden" name="category" value="piano">
+                            <button type="submit">Zobraziť produkty</button>
                         </div>
-                        <button type="submit">Zobraziť produkty</button>
                     </form>
                 </div>
                 <div class="carousel-item">
@@ -151,8 +151,8 @@
                                 <h5 class="card-title">Basgitary</h5>
                             </div>
                             <input type="hidden" name="category" value="bass_guitar">
+                            <button type="submit">Zobraziť produkty</button>
                         </div>
-                        <button type="submit">Zobraziť produkty</button>
                     </form>
                 </div>
             </div>

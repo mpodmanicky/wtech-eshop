@@ -7,6 +7,15 @@
     border-radius: 25px;
 }
 
+form .card button {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 2.5rem;
+    margin: 0 1rem;
+}
+
 .img-fluid {
     border-radius: 25px;
 }
