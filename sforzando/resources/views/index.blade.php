@@ -70,8 +70,7 @@
 
     <!--Categories-->
     <!--Categories in carousel-->
-    <section class="p-5">
-
+    <div class="container">
         <div id="categoriesCarousel" class="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -169,11 +168,11 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+    </div>
 
         <div class="container">
             <img src="images/carousel-images/placeholder-1.png" class="d-block w-100" alt="">
         </div>
-    </section>
 
     <!--Cart Button-->
     <div class="cart-button">

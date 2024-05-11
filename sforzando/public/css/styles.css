@@ -1,6 +1,6 @@
 .card {
     width: 100%;
-    margin: 0 .5em;
+    margin: 0;
     padding-bottom: 1em;
     transition: outline-width 1s ease-in-out;
     box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.3);
@@ -143,6 +143,19 @@ h1 {
     box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
+form button {
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    margin: 0px 10px;
+    height: 2.5rem;
+}
+
+.card form button {
+    text-align: center;
+}
+
 @media screen and (min-width: 768px) {
     #categoriesCarousel .carousel-inner {
         display: flex;
@@ -151,6 +164,6 @@ h1 {
     #categoriesCarousel .carousel-item {
         display: block;
         margin-right: 0;
-        flex: 0 0 calc(100% / 3);
+        flex: 0 0 calc(100% / 3.25);
     }
 }
