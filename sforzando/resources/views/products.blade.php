@@ -117,21 +117,22 @@
             @if (count($products) > 0)
             @foreach ($products as $product)
             <div class="col-md-4">
-                <div class="card" onclick="location.href='product_detail'">
+                <div class="card" onclick="location.href='products/{{ $product->id }}'">
                     <img src="images/grand_piano_licensable.png" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
-                        <p class="card-text"><strong>{{$product->name}}</strong></p>
+                        <h5 class="card-text"><strong>{{$product->name}}</strong></h5>
                         <div class="row">
                             <div class="col">
-                                <h3>{{$product->price}} € s DPH</h3>
+                                <h5>{{$product->price}} € s DPH</h5>
                                 <p>{{$product->price * 0.8}} € bez DPH</p>
                             </div>
                             <div class="col">
-                                <a href="#" class="btn btn-primary">Pridať do košíka</a>
+                                <a href="detail" class="btn btn-primary">Pridať do košíka</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <br>
             </div>
             @endforeach
             {{ $products->links() }}

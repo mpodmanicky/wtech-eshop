@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
+use App\Models\Product;
 
 Route::get('/', function () {
     return view('index');
@@ -12,6 +13,12 @@ Route::get('/', function () {
 
 Route::get('/home', function() {
     return view('index');
+});
+
+Route::get('/products/{id}', function ($id) {
+    $product = Product::find($id); // Retrieve product using ID
+
+    return view('product_detail', ['product' => $product]);
 });
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');

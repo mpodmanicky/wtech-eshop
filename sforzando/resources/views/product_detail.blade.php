@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -44,24 +44,24 @@
     <!--Search bar and login-->
     <nav class="navbar" id="main">
         <div class="container">
-            <form class="d-flex" role="search">
+            <form class="d-flex" role="search" action="{{route('search')}}" method="GET">
                 <div class="input-group">
                     <span id="basic-addon1" class="input-group-text">
                         <i class="bi bi-search"></i>
                     </span>
-                    <input class="form-control" type="search" placeholder="Zadajte názov produktu" aria-label="Search">
+                    <input class="form-control" name="search" type="search" placeholder="Zadajte názov produktu" aria-label="Search">
                 </div>
                 <button class="btn btn-outline-secondary" type="submit">Vyhľadať</button>
             </form>
             <div class="navbar" id="side">
-                <a href="login.html" id="login-icon"><i class="bi bi-person" type="button"></i></a>
-                <a href="login.html" class="nav-link">Login</a>
+                <a href="login" id="login-icon"><i class="bi bi-person" type="button"></i></a>
+                <a href="login" class="nav-link">Login</a>
             </div>
         </div>
     </nav>
     <!--Name of the product-->
     <div class="container">
-        <h1>Grand klavír - Petrof</h1>
+        <h1>{{ $product->name }}</h1>
     </div>
 
     <!--Produkt-karta-->
@@ -69,7 +69,7 @@
         <div class="row">
             <div class="col-md-6" id="product-image-column">
                 <div class="image-container">
-                    <img src="images/grand_piano_licensable.png" alt="Example Image" class="img-fluid">
+                    <img src="{{ $product->image_id }}" alt="{{ $product->name }}" class="img-fluid">
                 </div>
                 <div class="text-center mt-2" id="arrow-combo">
                     <button type="button" class="btn btn-secondary mr-2" id="arrow-button">
@@ -93,27 +93,7 @@
                             <div id="collapseOne" class="accordion-collapse collapse show"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    <strong>Klavír Petrof a jeho špecifikácia</strong> Petrof je renomovaný výrobca
-                                    klavírov so širokou ponukou modelov, ktoré kombinujú prvotriednu kvalitu s bohatou
-                                    zvukovou charakteristikou a elegantným dizajnom. Špecifikácie klavíru Petrof sa
-                                    líšia podľa konkrétneho modelu, ale mnohé z nich zdieľajú niektoré spoločné
-                                    charakteristiky.
-                                    Typické klavíry Petrof majú klavírnú klaviatúru s 88 klávesami, ktoré poskytujú
-                                    široký dynamický rozsah a presnú odozvu. Ich mechanika je precízne vyrobená a
-                                    umožňuje hráčovi jemnú kontrolu nad výrazom a intenzitou zvuku.
-                                    Telo klavíru Petrof je vyrobené z kvalitného dreva, ako je mahagón, javor alebo
-                                    orech, čo prispieva k ich bohatému a plnému zvuku. Ich povrchová úprava je
-                                    starostlivo spracovaná, aby bola odolná voči poškodeniu a zároveň esteticky
-                                    príťažlivá.
-                                    Kľúčové špecifikácie, ako je dĺžka, šírka a hmotnosť, sa líšia v závislosti od
-                                    konkrétneho modelu. Petrof vyrába klavíry rôznych veľkostí, od kompaktných
-                                    koncertných nástrojov po väčšie modely pre domáce použitie.
-                                    Okrem toho, klavíry Petrof sú často vybavené inovatívnymi technológiami, ako sú
-                                    rôzne zosilňovacie systémy alebo reprodukčné zariadenia, ktoré umožňujú ich použitie
-                                    aj v modernom prostredí alebo v kombinácii s elektronickou hudbou.
-                                    Celkovo sú klavíry Petrof zosobnením remeselného majstrovstva a hudobnej
-                                    excelentnosti, ktoré spĺňajú potreby a očakávania aj tých najnáročnejších hudobníkov
-                                    a milovníkov hudby po celom svete.
+                                    {{ $product->description }}
                                 </div>
                             </div>
                         </div>
@@ -130,11 +110,11 @@
             <div class="col-md-6" id="add-to-cart">
                 <div class="row">
                     <div class="col">
-                        <h3>1500 € s DPH</h3>
-                        <p>1200 € s DPH</p>
+                        <h3>{{ $product->price }} € s DPH</h3>
+                        <p>{{ $product->price * 0.8}} € s DPH</p>
                     </div>
                     <div class="col" style="text-align: end;">
-                        <h5 style="color:green">Na sklade</h5>
+                        <h5 style="color:green">{{ $product->available_stock }}</h5>
                         <div class="row">
                             <div class="col">
                                 <button type="button" class="btn btn-primary">
@@ -142,7 +122,7 @@
                                 </button>
                             </div>
                             <div class="col">
-                                <a href="udaje.html">
+                                <a href="cart">
                                     <button type="button" class="btn btn-secondary">
                                         Kúpiť ihneď
                                     </button>
