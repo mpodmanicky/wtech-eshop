@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('color');
             $table->string('category');
             $table->string('brand');
-            $table->decimal('available_stock', 8, 2);
+            $table->decimal('available_stock', 8);
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
         });

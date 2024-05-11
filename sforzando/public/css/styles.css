@@ -152,6 +152,37 @@ form button {
     height: 2.5rem;
 }
 
+.productRow {
+    display: flex;
+    justify-content: space-between
+}
+
+.removeButton {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.plusButton {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font: 900;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.minusButton {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font: 900;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
 .card form button {
     text-align: center;
 }

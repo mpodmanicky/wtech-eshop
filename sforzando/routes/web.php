@@ -21,6 +21,13 @@ Route::get('/products/{id}', function ($id) {
     return view('product_detail', ['product' => $product]);
 });
 
+Route::get('/cart/{id}', function($id){
+    $product = Product::find($id); // Retrieve product using ID
+
+    return view('cart', ['product' => $product]);
+
+});
+
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 Route::get('/products', [ProductController::class, 'index'])->name('products');

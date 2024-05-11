@@ -22,7 +22,7 @@
     <!--Header and navigation-->
     <nav class="navbar navbar-expand-md">
         <div class="container">
-            <a href="index.html" class="navbar-brand">SFORZANDO</a>
+            <a href="/" class="navbar-brand">SFORZANDO</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -122,7 +122,7 @@
                                 </button>
                             </div>
                             <div class="col">
-                                <a href="cart">
+                                <a href="/cart/{{$product->id}}">
                                     <button type="button" class="btn btn-secondary">
                                         Kúpiť ihneď
                                     </button>
