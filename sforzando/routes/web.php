@@ -28,6 +28,10 @@ Route::get('/cart/buyNow/{id}', [CartController::class, 'buyNow'])->name('cart.b
 
 Route::get('/cart/removeFromCart/{id}', [CartController::class, 'removeFromCart'])->name('cart.removeFromCart');
 
+Route::get('/cart/addQuantity/{id}', [CartController::class, 'addQuantity'])->name('cart.addQuantity');
+
+Route::get('/cart/subQuantity/{id}', [CartController::class, 'subQuantity'])->name('cart.subQuantity');
+
 Route::get('/cart/{id}', function($id){
     $product = Product::find($id); // Retrieve product using ID
 

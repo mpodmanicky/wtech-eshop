@@ -91,9 +91,28 @@ class CartController extends Controller
 
     public function addQuantity(Request $request, $productId) {
 
+        $product = Product::find($productId); // Fetch product details
+
+        $cart = session()->get('cart', []); // Retrieve cart data from session
+
+        $cart[$productId]['quantity']++;
+
+        session()->put('cart', $cart); // Store updated cart data in session
+
+        return view('cart', ['cart' => $cart]);
+
     }
 
     public function subQuantity(Request $request, $productId) {
+         $product = Product::find($productId); // Fetch product details
+
+        $cart = session()->get('cart', []); // Retrieve cart data from session
+
+        $cart[$productId]['quantity']--;
+
+        session()->put('cart', $cart); // Store updated cart data in session
+
+        return view('cart', ['cart' => $cart]);
 
     }
 }
