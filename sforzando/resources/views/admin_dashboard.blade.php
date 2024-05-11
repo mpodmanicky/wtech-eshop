@@ -52,7 +52,7 @@
             <input type="text" id="brand" name="brand"><br><br>
 
             <label for="stock">Stock:</label>
-            <input type="number" id="stock" name="stock"><br><br>
+            <input type="number" id="stock" name="available_stock"><br><br>
 
             <br><br>
 

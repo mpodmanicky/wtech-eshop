@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@example.com',
             'type_id' => $adminType->id,
         ]);
+        
         Product::factory()->create([
             'name' => 'Fender Stratocaster',
             'category' => 'electric_guitar',
