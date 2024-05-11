@@ -64,3 +64,5 @@ Route::post('/product/store', [ProductController::class, 'store'])->name('produc
 
 Route::get('/admin/products', [ProductController::class, 'adminIndex'])->name('admin.products');
 
+Route::delete('/admin/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+

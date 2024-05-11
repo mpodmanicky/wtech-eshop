@@ -48,5 +48,13 @@ class ProductController extends Controller
         return response()->json(['message' => 'Product has been added'], 201);
     }
 
+    public function destroy($id)
+    {
+        $product = Product::find($id);
+        $product->delete();
+
+        return redirect()->route('admin.products')->with('success', 'Product deleted successfully');
+    }
+
 
 }
