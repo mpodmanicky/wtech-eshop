@@ -17,6 +17,12 @@ class ProductController extends Controller
         return view('products', ['products' => $products]);
     }
 
+    public function adminIndex() {
+        $products = Product::all();
+        
+        return view('admin_products', ['products' => $products]);
+    }
+
     public function store(Request $request) {
         
         $request->validate([

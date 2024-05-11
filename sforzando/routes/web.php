@@ -61,3 +61,6 @@ route::get('/admin/dashboard', [HomeController::class, 'index'])->
     middleware(['auth', 'admin']);
 
 Route::post('/product/store', [ProductController::class, 'store'])->name('product.store');
+
+Route::get('/admin/products', [ProductController::class, 'adminIndex'])->name('admin.products');
+
