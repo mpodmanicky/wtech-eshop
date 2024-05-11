@@ -117,9 +117,11 @@
                         <h5 style="color:green">{{ $product->available_stock }}</h5>
                         <div class="row">
                             <div class="col">
+                                <a href="/cart/addToCart/{{$product->id}}">
                                 <button type="button" class="btn btn-primary">
                                     Do košíka
                                 </button>
+                            </a>
                             </div>
                             <div class="col">
                                 <a href="/cart/{{$product->id}}">

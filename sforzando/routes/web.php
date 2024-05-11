@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
 use App\Models\Product;
+use App\Http\Controllers\CartController;
 
 Route::get('/', function () {
     return view('index');
@@ -20,6 +21,8 @@ Route::get('/products/{id}', function ($id) {
 
     return view('product_detail', ['product' => $product]);
 });
+
+Route::get('/cart/addToCart/{id}', [CartController::class, 'addToCart'])->name('cart.addToCart');
 
 Route::get('/cart/{id}', function($id){
     $product = Product::find($id); // Retrieve product using ID
