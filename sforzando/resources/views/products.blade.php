@@ -72,17 +72,6 @@
                 <div class="btn-group">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false" id="filterButton">
-                        Typ nástroja
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Gitara</a></li>
-                        <li><a class="dropdown-item" href="#">Klavír</a></li>
-                        <li><a class="dropdown-item" href="#">Bubny</a></li>
-                    </ul>
-                </div>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                        aria-expanded="false" id="filterButton">
                         Značka
                     </button>
                     <ul class="dropdown-menu">
