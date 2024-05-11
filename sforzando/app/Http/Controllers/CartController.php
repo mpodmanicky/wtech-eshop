@@ -85,9 +85,7 @@ class CartController extends Controller
             unset($cart[$productId]); // Remove product from cart
         }
 
-        session()->put('cart', $cart); // Store updated cart data in session
-
-        return redirect()->back()->with('success', 'Product removed from cart!');
+        return view('cart', ['cart' => $cart]);
 
     }
 
