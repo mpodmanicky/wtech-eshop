@@ -141,7 +141,7 @@
 
     <!--Cart Button-->
     <div class="cart-button">
-        <a href="#" class="btn btn-primary btn-lg" id="cart-button">
+        <a href="/cart" class="btn btn-primary btn-lg" id="cart-button">
             <i class="bi bi-cart2"></i>
         </a>
     </div>

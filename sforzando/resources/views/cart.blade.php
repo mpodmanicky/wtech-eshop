@@ -67,7 +67,7 @@
                             <div class="productInfo">
                                 <p>{{ $cartItem['price']*$cartItem['quantity'] }} €</p>
                                 <div id="modify-buttons">
-                                    <button class="removeButton" data-product-id="{{ $cartItem['id'] }}">Odobrať</button>
+                                    <button class="removeButton" data-product-id="{{ $cartItem['id'] }}" onclick="/cart/removeFromCart/{{$cartItem['id']}}">Odobrať</button>
                                     <button class="plusButton" data-product-id="{{ $cartItem['id'] }}"><i class='bi bi-plus'></i></button>
                                     <button class="minusButton" data-product-id="{{ $cartItem['id'] }}"><i class='bi bi-dash'></i></button>
                                 </div>

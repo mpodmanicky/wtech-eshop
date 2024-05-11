@@ -26,6 +26,8 @@ Route::get('/cart/addToCart/{id}', [CartController::class, 'addToCart'])->name('
 
 Route::get('/cart/buyNow/{id}', [CartController::class, 'buyNow'])->name('cart.buyNow');
 
+Route::get('/cart/removeFromCart/{id}', [CartController::class, 'removeFromCart'])->name('cart.removeFromCart');
+
 Route::get('/cart/{id}', function($id){
     $product = Product::find($id); // Retrieve product using ID
 

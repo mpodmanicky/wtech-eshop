@@ -73,6 +73,22 @@ class CartController extends Controller
 
     public function removeFromCart(Request $request, $productId) {
 
+        $product = Product::find($productId); // Fetch product details
+
+        if (!$product) {
+            return redirect()->back()->withErrors(['error' => 'Product not found']);
+        }
+
+        $cart = session()->get('cart', []); // Retrieve cart data from session
+
+        if (array_key_exists($productId, $cart)) {
+            unset($cart[$productId]); // Remove product from cart
+        }
+
+        session()->put('cart', $cart); // Store updated cart data in session
+
+        return redirect()->back()->with('success', 'Product removed from cart!');
+
     }
 
     public function addQuantity(Request $request, $productId) {
