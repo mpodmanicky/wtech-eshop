@@ -65,14 +65,13 @@
                                 <img src='images/grand-piano.png' alt="Image">
                             </div>
                             <div class="productInfo">
+                                <span id="quantity-{{ $cartItem['id'] }}">{{ $cartItem['quantity'] }}</span>
                                 <p>{{ $cartItem['price']*$cartItem['quantity'] }} €</p>
                                 <div id="modify-buttons">
-                                    {{$productId = $cartItem['id']}}
-                                    <button class="removeButton" data-product-id="{{ $cartItem['id'] }}" onclick="{{ route('/cart/removeFromCart/'. $productId) }}">Odobrať</button>
-                                    <button class="plusButton" data-product-id="{{ $cartItem['id'] }}" onclick="{{ route('/cart/addQuantity/'. $productId) }}"><i class='bi bi-plus'></i></button>
-                                    <button class="minusButton" data-product-id="{{ $cartItem['id'] }}" onclick="{{ route('/cart/subQuantity/'. $productId) }}"><i class='bi bi-dash'></i></button>
+                                    <button class="removeButton" data-product-id="{{ $cartItem['id'] }}"><a href="/cart/removeFromCart/{{$cartItem['id']}}" id="remove-from-cart">Odobrať</a></button>
+                                    <button class="plusButton" data-product-id="{{ $cartItem['id'] }}" ><a href="/cart/addQuantity/{{$cartItem['id']}}" id="adjust-quantity"><i class='bi bi-plus'></i></a></button>
+                                    <button class="minusButton" data-product-id="{{ $cartItem['id'] }}" ><a href="/cart/subQuantity/{{$cartItem['id']}}" id="adjust-quantity"><i class='bi bi-dash'></i></a></button>
                                 </div>
-                                <span id="quantity-{{ $cartItem['id'] }}">{{ $cartItem['quantity'] }}</span>
                             </div>
                         </div>
                     @endforeach

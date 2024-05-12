@@ -73,19 +73,21 @@ class CartController extends Controller
 
     public function removeFromCart(Request $request, $productId) {
 
-        $product = Product::find($productId); // Fetch product details
+        $cart = session()->get('cart', []); // Assuming cart is stored in session
 
-        if (!$product) {
-            return redirect()->back()->withErrors(['error' => 'Product not found']);
-        }
+    // 2. Check if product exists in the cart
+    if (!array_key_exists($productId, $cart)) {
+        return redirect()->back()->with('error', 'Product not found in cart');
+    }
 
-        $cart = session()->get('cart', []); // Retrieve cart data from session
+    // 3. Remove the product from the cart
+    unset($cart[$productId]);
 
-        if (array_key_exists($productId, $cart)) {
-            unset($cart[$productId]); // Remove product from cart
-        }
+    // 4. Update the cart data (replace with your storage mechanism)
+    session()->put('cart', $cart);
 
-        return view('cart', ['cart' => $cart]);
+    // 5. Redirect back with a success message
+    return redirect()->back();
 
     }
 
@@ -99,20 +101,24 @@ class CartController extends Controller
 
         session()->put('cart', $cart); // Store updated cart data in session
 
-        return view('cart', ['cart' => $cart]);
+        return redirect()->back();
 
     }
 
     public function subQuantity(Request $request, $productId) {
-         $product = Product::find($productId); // Fetch product details
+        $product = Product::find($productId); // Fetch product details
 
         $cart = session()->get('cart', []); // Retrieve cart data from session
 
-        $cart[$productId]['quantity']--;
+        if($cart[$productId]['quantity'] == 1) {
+            unset($cart[$productId]);
+        } else {
+            $cart[$productId]['quantity']--;
+        }
 
         session()->put('cart', $cart); // Store updated cart data in session
 
-        return view('cart', ['cart' => $cart]);
+        return redirect()->back();
 
     }
 }

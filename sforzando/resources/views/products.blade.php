@@ -127,7 +127,7 @@
                                 <p>{{$product->price * 0.8}} € bez DPH</p>
                             </div>
                             <div class="col">
-                                <a href="detail" class="btn btn-primary">Pridať do košíka</a>
+                                <a href="/cart/addToCart/{{$product->id}}" class="btn btn-primary">Pridať do košíka</a>
                             </div>
                         </div>
                     </div>
