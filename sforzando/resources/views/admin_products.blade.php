@@ -35,10 +35,16 @@
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->price }}</td>
                         <td>
-                            <button class="btn btn-primary">Modify</button>
+                            <a href="{{ route('products.edit', $product->id) }}">
+                                <button class="btn btn-primary">Modify</button>
+                            </a>
                         </td>
                         <td>
-                            <button class="btn btn-danger">Delete</button>
+                            <form action="{{ route('products.destroy', $product->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach
