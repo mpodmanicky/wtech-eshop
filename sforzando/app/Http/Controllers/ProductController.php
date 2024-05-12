@@ -45,7 +45,7 @@ class ProductController extends Controller
             'available_stock' => $request->available_stock,
         ]);
 
-        return response()->json(['message' => 'Product has been added'], 201);
+        return redirect()->route('admin.products')->with('success', 'Product created successfully');
     }
 
     public function destroy($id)
