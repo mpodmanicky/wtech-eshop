@@ -80,7 +80,11 @@
         <div class="row">
             <div class="col-md-6" id="product-image-column">
                 <div class="image-container">
-                    <img src="{{ $product->image_id }}" alt="{{ $product->name }}" class="img-fluid">
+                    @if ($product->images->first())
+                        <img src="{{ asset('images/product-images/' . $product->images->first()->url) }}" alt="{{ $product->name }}" class="img-fluid">
+                    @else
+                        <img src="{{ asset('images/grand_piano_licensable.jpg') }}" alt="{{ $product->name }}" class="img-fluid">
+                    @endif
                 </div>
                 <div class="text-center mt-2" id="arrow-combo">
                     <button type="button" class="btn btn-secondary mr-2" id="arrow-button">

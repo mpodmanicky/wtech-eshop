@@ -62,7 +62,6 @@
                         <div class="productRow">
                             <div class="productMiniature">
                                 <h3>{{ $cartItem['name'] }}</h3>
-                                <img src='images/grand-piano.png' alt="Image">
                             </div>
                             <div class="productInfo">
                                 <span id="quantity-{{ $cartItem['id'] }}">{{ $cartItem['quantity'] }}</span>

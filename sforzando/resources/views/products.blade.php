@@ -129,7 +129,11 @@
             @foreach ($products as $product)
             <div class="col-md-4">
                 <div class="card" onclick="location.href='/products/{{ $product->id }}'">
-                    <img src="images/grand_piano_licensable.png" class="card-img-top img-fluid" alt="{{$product->name}}">
+                @if ($product->images->first())
+                    <img src="{{ asset('images/product-images/' . $product->images->first()->url) }}" class="card-img-top img-fluid" alt="{{$product->name}}">
+                @else
+                    <img src="{{ asset('images/grand_piano_licensable.jpg') }}" class="card-img-top img-fluid" alt="{{$product->name}}">
+                @endif
                     <div class="card-body">
                         <h5 class="card-text"><strong>{{$product->name}}</strong></h5>
                         <div class="row">

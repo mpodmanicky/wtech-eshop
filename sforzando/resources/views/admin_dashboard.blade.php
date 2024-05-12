@@ -33,12 +33,12 @@
 
             <label for="category">Category:</label>
             <select id="category" name="category">
-                <option value="electric_guitars">Elektrické gitary</option>
-                <option value="acoustic_guitars">Akustické gitary</option>
-                <option value="wind_instruments">Dychové nástroje</option>
-                <option value="percussion">Bicie nástroje</option>
-                <option value="pianos">Klavíry</option>
-                <option value="bass_guitars">Basgitary</option>
+                <option value="electric_guitar">Elektrické gitary</option>
+                <option value="acoustic_guitar">Akustické gitary</option>
+                <option value="brass_instruments">Dychové nástroje</option>
+                <option value="drums">Bicie nástroje</option>
+                <option value="piano">Klavíry</option>
+                <option value="bass_guitar">Basgitary</option>
             </select>
             <br><br>
 
