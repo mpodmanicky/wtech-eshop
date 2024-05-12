@@ -69,21 +69,18 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
 
-        // Delete images from the folder and the database
         foreach ($product->images as $image) {
-            // Delete image from the folder
+
             $imagePath = public_path('images/product-images/' . $image->url);
             if (File::exists($imagePath)) {
                 File::delete($imagePath);
             }
 
-            // Delete image from the database
+            
             $image->delete();
         }
 
         $product->delete();
-
-        // Delete images
 
         return redirect()->route('admin.products')->with('success', 'Product deleted successfully');
     }
@@ -107,7 +104,31 @@ class ProductController extends Controller
         $product->brand = $request->input('brand');
         $product->available_stock = $request->input('available_stock');
 
-        // Update images
+        if ($request->hasFile('images')) {
+
+            foreach ($product->images as $image) {
+
+                $imagePath = public_path('images/product-images/' . $image->url);
+                if (File::exists($imagePath)) {
+                    File::delete($imagePath);
+                }
+
+                $image->delete();
+            }
+
+            // Upload new images
+            $images = $request->file('images');
+            foreach($images as $image) {
+                $filename = time() . '_' . Str::random(10) . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('images/product-images'), $filename);
+
+                // Save new image in the database
+                $imageModel = new Image();
+                $imageModel->url = $filename;
+                $imageModel->product_id = $product->id;
+                $imageModel->save();
+            }
+        }
 
         $product->save();
 
