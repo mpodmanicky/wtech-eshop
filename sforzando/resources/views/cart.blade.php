@@ -57,7 +57,7 @@
                     <h2>Košík</h2>
                     <!-- Čiara -->
                     <hr class="line">
-                    @if (session()->has('cart'))
+                    @if (session()->has('cart') and count(session('cart'))>0)
                     @foreach (session('cart') as $cartItem)
                         <div class="productRow">
                             <div class="productMiniature">
@@ -76,12 +76,16 @@
                         </div>
                     @endforeach
                 @else
-                    <p>Váš košík je prázdny.</p>
+                    <h3 style="text-align: center">Váš košík je prázdny.</h3>
                 @endif
             <div class="col-md-4 divider d-flex justify-content-center align-items-center">
                 <!-- Tlačidlo pre pokračovanie -->
                 <div class="text-center">
-                    <a href="info" class="btn btn-primary">Pokračovať</a>
+                    @if (session()->has('cart') and count(session('cart')) == 0)
+                        <a href="info" class="btn btn-primary disabled">Pokračovať</a>
+                    @else
+                        <a href="info" class="btn btn-primary">Pokračovať</a>
+                    @endif
                 </div>
             </div>
         </div>
