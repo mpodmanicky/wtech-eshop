@@ -71,6 +71,10 @@ Route::get('/payment', function () {
     return view('payment');
 });
 
+Route::get('/payment/process', [CartController::class, 'payment'])->name('payment/process');
+
+Route::get('payment/confirmation', [CartController::class, 'confirmation'])->name('payment/confirmation');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
