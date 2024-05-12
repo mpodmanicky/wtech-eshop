@@ -52,21 +52,24 @@
         </li>
     </ul>
 
+    <div class="container">
     <div class="paymentConfirmation">
-        <h1>Payment Confirmation</h1>
-        <p>Thank you, {{ $name }}!</p>
-        <p>Your email address: {{ $email }}</p>
-        <p>Your address: {{ $address }}</p>
+        <h1>Potvrdenie objednávky!</h1>
+        <p>Ďakujeme, <strong>{{ $name }}</strong>!</p>
+        <p>Vaša e-mailová adresa: {{ $email }}</p>
+        <p>Vaša adresa: {{ $address }}</p>
 
         @if (isset($cart) && !empty($cart))
-            <h2>Your Cart Items</h2>
+            <h2>Rekapitulácia objednávky</h2>
             <ul>
                 @foreach ($cart as $item)
-                    <li>{{ $item['name'] }} - {{ $item['price'] }}€</li>
+                    <li>{{ $item['name'] }} - {{ $item['price'] }} €</li>
                 @endforeach
         @endif
     </div>
+</div>
 
+    <div class="container">
     <form action="{{ route('payment/confirmation') }}" method="GET">
   <div class="mb-3">
     <label for="transportation">Možnosti dopravy</label>
@@ -85,6 +88,7 @@
   </div>
   <button type="submit" class="btn btn-primary">Potvrdiť</button>
 </form>
+</div>
     <!--Platba-->
 </body>
 
