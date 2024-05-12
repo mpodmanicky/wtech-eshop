@@ -65,25 +65,17 @@
                             <hr class="line">
                         </div>
                     </div>
-                    <form>
+                    <form action="{{ route('payment/process') }}" method="GET">
                         <div class="mb-3">
                             <label for="email" class="form-label">E-mailová adresa</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text">Nikdy Váš e-mail s nikým nebudeme zdieľať.</div>
                         </div>
                         <div class="mb-3">
                             <label for="meno" class="form-label">Meno a priezvisko</label>
-                            <input type="text" class="form-control" id="meno">
+                            <input type="text" name="name" class="form-control" id="meno">
                         </div>
-                    </form>
-                    <h2>Údaje pre dopravcu</h2>
-                    <!-- Čiara -->
-                    <div class="row">
-                        <div class="col">
-                            <hr class="line">
-                        </div>
-                    </div>
-                    <form>
+                        <br>
                         <select class="form-select form-select-lg mb-3" aria-label="Large select example">
                             <option selected>Vyberte kraijnu</option>
                             <option value="1">Slovensko</option>
@@ -92,24 +84,34 @@
                         </select>
                         <div class="mb-3">
                             <label for="mesto" class="form-label">Mesto</label>
-                            <input type="text" class="form-control" id="mesto" placeholder="Banská Bystrica">
+                            <input type="text" class="form-control" name="city" id="mesto" placeholder="Banská Bystrica">
                         </div>
                         <div class="mb-3">
                             <label for="ulica" class="form-label">Ulica a číslo domu</label>
-                            <input type="text" class="form-control" id="ulica" placeholder="Ulica, číslo">
+                            <input type="text" class="form-control" name="street" id="ulica" placeholder="Ulica, číslo">
                         </div>
                         <div class="mb-3 col-md-2">
                             <label for="postcode" class="form-label">PSČ</label>
-                            <input type="text" class="form-control" id="postcode" placeholder="Poštové číslo">
+                            <input type="numeric" class="form-control" name="zip" id="postcode" placeholder="Poštové číslo">
                         </div>
+                        <button type="submit" class="btn btn-primary" {{ $errors->any() ? 'disabled' : '' }}>Potvrdiť</button>
                     </form>
-                    <button type="submit" class="btn btn-primary">Potvrdiť</button>
                 </div>
             </div>
             <div class="col-md-4 divider d-flex justify-content-center align-items-center">
-                <!-- Tlačidlo pre pokračovanie -->
+                <?php
+                    $cart = session('cart'); // Get cart from session
+                    $totalPrice = 0; // Initialize total price
+
+                    if (isset($cart) && !empty($cart)) {
+                        foreach ($cart as $cartItem) {
+                            $totalPrice += $cartItem['price'] * $cartItem['quantity'];
+                        }
+                    }
+                ?>
                 <div class="text-center">
-                    <a href="payment" class="btn btn-primary">Pokračovať</a>
+                    <h1>Celkovo</h1>
+                    <h2>{{$totalPrice}} €</h2>
                 </div>
             </div>
         </div>

@@ -197,6 +197,14 @@ form button {
     color: white;
 }
 
+.paymentConfirmation {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
 @media screen and (min-width: 768px) {
     #categoriesCarousel .carousel-inner {
         display: flex;

@@ -52,6 +52,39 @@
         </li>
     </ul>
 
+    <div class="paymentConfirmation">
+        <h1>Payment Confirmation</h1>
+        <p>Thank you, {{ $name }}!</p>
+        <p>Your email address: {{ $email }}</p>
+        <p>Your address: {{ $address }}</p>
+
+        @if (isset($cart) && !empty($cart))
+            <h2>Your Cart Items</h2>
+            <ul>
+                @foreach ($cart as $item)
+                    <li>{{ $item['name'] }} - {{ $item['price'] }}€</li>
+                @endforeach
+        @endif
+    </div>
+
+    <form action="{{ route('payment/confirmation') }}" method="GET">
+  <div class="mb-3">
+    <label for="transportation">Možnosti dopravy</label>
+    <select class="form-select form-select-lg mb-3" name="transportation" id="transportation">
+      <option value="standard">Štandardné doručenie</option>
+      <option value="express">Expresné doručenie</option>
+      </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="payment">Možnosti platby</label>
+    <select class="form-select form-select-lg mb-3" name="payment" id="payment">
+      <option value="credit_card">Kreditná karta</option>
+      <option value="bank_transfer">Bankovým prevodom</option>
+      </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Potvrdiť</button>
+</form>
     <!--Platba-->
 </body>
 

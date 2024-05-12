@@ -121,4 +121,52 @@ class CartController extends Controller
         return view('cart', ['cart' => $cart]);
 
     }
+
+    public function payment(Request $request) {
+
+//         $rules = [
+//     'email' => 'required|email', // Required, valid email format
+//     'name' => 'required|string|max:255', // Required, string, max length 255 characters
+//     'city' => 'required|string|max:255', // Required, string, max length 255 characters
+//     'street' => 'required|string|max:255', // Required, string, max length 255 characters
+//     'zip' => 'required|numeric', // Required, numeric
+//   ];
+
+//         try {
+//     $this->validate($request, $rules);
+//   } catch (ValidationException $e) {
+//     return redirect()->back()->withErrors($e->validator->messages());
+//   }
+
+        $cart = session()->get('cart', []); // Retrieve cart data from session
+
+        $email = $request->get('email');
+        $name = $request->get('name'); 
+        $city = $request->get('city');
+        $street = $request->get('street');
+        $zip = $request->get('zip');
+
+        $address = $city . ', ' . $street . ', ' . $zip;
+
+        return view('payment', ['cart' => $cart, 'email' => $email, 'name' => $name, 'address' => $address]);
+    }
+
+    public function confirmation(Request $request) {
+        $cart = session()->get('cart', []); // Retrieve cart data from session
+
+        $email = $request->get('email');
+        $name = $request->get('name'); 
+        $address = $request->get('address');
+        $transportation = $request->get('transportation');
+        $payment = $request->get('payment');
+
+        return view('payment-confirmation', [
+      'cart' => $cart,
+      'email' => $email,
+      'name' => $name,
+      'address' => $address,
+      'transportation' => $transportation,
+      'payment' => $payment,
+  ]);
+    }
 }
