@@ -103,7 +103,7 @@
                             <input type="text" class="form-control" id="postcode" placeholder="Poštové číslo">
                         </div>
                     </form>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Potvrdiť</button>
                 </div>
             </div>
             <div class="col-md-4 divider d-flex justify-content-center align-items-center">

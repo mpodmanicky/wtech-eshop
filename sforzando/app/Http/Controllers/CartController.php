@@ -87,7 +87,7 @@ class CartController extends Controller
     session()->put('cart', $cart);
 
     // 5. Redirect back with a success message
-    return redirect()->back();
+    return view('cart', ['cart' => $cart]);
 
     }
 
@@ -101,7 +101,7 @@ class CartController extends Controller
 
         session()->put('cart', $cart); // Store updated cart data in session
 
-        return redirect()->back();
+        return view('cart', ['cart' => $cart]);
 
     }
 
@@ -118,7 +118,7 @@ class CartController extends Controller
 
         session()->put('cart', $cart); // Store updated cart data in session
 
-        return redirect()->back();
+        return view('cart', ['cart' => $cart]);
 
     }
 }

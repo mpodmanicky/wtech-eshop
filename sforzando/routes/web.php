@@ -32,6 +32,14 @@ Route::get('/cart/addQuantity/{id}', [CartController::class, 'addQuantity'])->na
 
 Route::get('/cart/subQuantity/{id}', [CartController::class, 'subQuantity'])->name('cart.subQuantity');
 
+Route::get('/products/sortByPriceAsc/{category}', [ProductController::class, 'sortByPriceAsc'])->name('products.sortByPriceAsc');
+
+Route::get('/products/sortByPriceDesc/{category}', [ProductController::class, 'sortByPriceDesc'])->name('products.sortByPriceDesc');
+
+Route::get('/products/filterByBrand/{brand}/{category}', [ProductController::class, 'filterByBrand'])->name('products.filterByBrand');
+
+Route::get('/products/filterByColor/{color}/{category}', [ProductController::class, 'filterByColor'])->name('products.filterByColor');
+
 Route::get('/cart/{id}', function($id){
     $product = Product::find($id); // Retrieve product using ID
 
