@@ -74,6 +74,28 @@ class ProductController extends Controller
         return redirect()->route('admin.products')->with('success', 'Product created successfully');
     }
 
+    public function filterByBrand($brand, $category) {
+        
+        $products = $category ? Product::where('category', $category)->where('brand', $brand)->paginate(12) : collect();
+
+        $brands = $products->unique('brand')->pluck('brand');
+
+        $colors = $products->unique('color')->pluck('color');
+
+        return view('products', ['products' => $products, 'brands' => $brands, 'colors' => $colors]);
+    }
+
+    public function filterByColor($color, $category) {
+
+        $products = $category ? Product::where('category', $category)->where('color', $color)->paginate(12) : collect();
+
+        $brands = $products->unique('brand')->pluck('brand');
+
+        $colors = $products->unique('color')->pluck('color');
+
+        return view('products', ['products' => $products, 'brands' => $brands, 'colors' => $colors]);
+    }
+
     public function destroy($id)
     {
         $product = Product::find($id);

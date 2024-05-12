@@ -82,9 +82,9 @@
                 <!-- Tlačidlo pre pokračovanie -->
                 <div class="text-center">
                     @if (session()->has('cart') and count(session('cart')) == 0)
-                        <a href="info" class="btn btn-primary disabled">Pokračovať</a>
+                        <a href="/info" class="btn btn-primary disabled">Pokračovať</a>
                     @else
-                        <a href="info" class="btn btn-primary">Pokračovať</a>
+                        <a href="/info" class="btn btn-primary">Pokračovať</a>
                     @endif
                 </div>
             </div>

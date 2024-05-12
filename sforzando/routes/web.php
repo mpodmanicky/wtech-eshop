@@ -36,6 +36,10 @@ Route::get('/products/sortByPriceAsc/{category}', [ProductController::class, 'so
 
 Route::get('/products/sortByPriceDesc/{category}', [ProductController::class, 'sortByPriceDesc'])->name('products.sortByPriceDesc');
 
+Route::get('/products/filterByBrand/{brand}/{category}', [ProductController::class, 'filterByBrand'])->name('products.filterByBrand');
+
+Route::get('/products/filterByColor/{color}/{category}', [ProductController::class, 'filterByColor'])->name('products.filterByColor');
+
 Route::get('/cart/{id}', function($id){
     $product = Product::find($id); // Retrieve product using ID
 

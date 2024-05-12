@@ -88,7 +88,7 @@
                     <ul class="dropdown-menu">
                         @if (isset($brands) && count($brands) > 0)
                             @foreach ($brands as $brand)
-                                <li><a class="dropdown-item" href="#">{{ $brand }}</a></li>
+                                <li><a class="dropdown-item" href="/products/filterByBrand/{{$brand}}/{{$products->first()->category}}">{{ $brand }}</a></li>
                             @endforeach
                         @endif
                     </ul>
@@ -101,7 +101,7 @@
                     <ul class="dropdown-menu">
                         @if (isset($colors) && count($colors) > 0)
                             @foreach ($colors as $color)
-                                <li><a class="dropdown-item" href="#">{{ $color }}</a></li>
+                                <li><a class="dropdown-item" href="/products/filterByColor/{{$color}}/{{$products->first()->category}}">{{ $color }}</a></li>
                             @endforeach
                         @endif
                     </ul>
