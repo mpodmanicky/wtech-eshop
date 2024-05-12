@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SearchController;
 use App\Models\Product;
+use App\Http\Controllers\CartController;
 
 Route::get('/', function () {
     return view('index');
@@ -19,6 +20,23 @@ Route::get('/products/{id}', function ($id) {
     $product = Product::find($id); // Retrieve product using ID
 
     return view('product_detail', ['product' => $product]);
+});
+
+Route::get('/cart/addToCart/{id}', [CartController::class, 'addToCart'])->name('cart.addToCart');
+
+Route::get('/cart/buyNow/{id}', [CartController::class, 'buyNow'])->name('cart.buyNow');
+
+Route::get('/cart/removeFromCart/{id}', [CartController::class, 'removeFromCart'])->name('cart.removeFromCart');
+
+Route::get('/cart/addQuantity/{id}', [CartController::class, 'addQuantity'])->name('cart.addQuantity');
+
+Route::get('/cart/subQuantity/{id}', [CartController::class, 'subQuantity'])->name('cart.subQuantity');
+
+Route::get('/cart/{id}', function($id){
+    $product = Product::find($id); // Retrieve product using ID
+
+    return view('cart', ['product' => $product]);
+
 });
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');

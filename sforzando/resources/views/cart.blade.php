@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="{{ asset('css/styles.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Košík</title>
 </head>
@@ -56,25 +56,29 @@
                 <div class="mb-3">
                     <h2>Košík</h2>
                     <!-- Čiara -->
-                    <div class="row">
-                        <div class="col">
-                            <hr class="line">
+                    <hr class="line">
+                    @if (session()->has('cart'))
+                    @foreach (session('cart') as $cartItem)
+                        <div class="productRow">
+                            <div class="productMiniature">
+                                <h3>{{ $cartItem['name'] }}</h3>
+                                <img src='images/grand-piano.png' alt="Image">
+                            </div>
+                            <div class="productInfo">
+                                <p>{{ $cartItem['price']*$cartItem['quantity'] }} €</p>
+                                <div id="modify-buttons">
+                                    {{$productId = $cartItem['id']}}
+                                    <button class="removeButton" data-product-id="{{ $cartItem['id'] }}" onclick="{{ route('/cart/removeFromCart/'. $productId) }}">Odobrať</button>
+                                    <button class="plusButton" data-product-id="{{ $cartItem['id'] }}" onclick="{{ route('/cart/addQuantity/'. $productId) }}"><i class='bi bi-plus'></i></button>
+                                    <button class="minusButton" data-product-id="{{ $cartItem['id'] }}" onclick="{{ route('/cart/subQuantity/'. $productId) }}"><i class='bi bi-dash'></i></button>
+                                </div>
+                                <span id="quantity-{{ $cartItem['id'] }}">{{ $cartItem['quantity'] }}</span>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Čiara -->
-                    <div class="row">
-                        <div class="col">
-                            <hr class="line">
-                        </div>
-                    </div>
-                    <!-- Čiara -->
-                    <div class="row">
-                        <div class="col">
-                            <hr class="line">
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    @endforeach
+                @else
+                    <p>Váš košík je prázdny.</p>
+                @endif
             <div class="col-md-4 divider d-flex justify-content-center align-items-center">
                 <!-- Tlačidlo pre pokračovanie -->
                 <div class="text-center">
