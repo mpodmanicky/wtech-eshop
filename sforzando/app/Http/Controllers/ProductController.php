@@ -14,13 +14,39 @@ class ProductController extends Controller
         
         $products = $category ? Product::where('category', $category)->paginate(12) : collect();
 
-        return view('products', ['products' => $products]);
+        $brands = $products->unique('brand')->pluck('brand');
+
+        $colors = $products->unique('color')->pluck('color');
+
+        return view('products', ['products' => $products, 'brands' => $brands, 'colors' => $colors]);
     }
 
     public function adminIndex() {
         $products = Product::all();
         
         return view('admin_products', ['products' => $products]);
+    }
+
+    public function sortByPriceAsc($category) {
+
+        $products = $category ? Product::where('category', $category)->orderBy('price', 'asc')->paginate(12) : collect();
+
+         $brands = $products->unique('brand')->pluck('brand');
+
+        $colors = $products->unique('color')->pluck('color');
+
+        return view('products', ['products' => $products, 'brands' => $brands, 'colors' => $colors]);
+
+    }
+
+    public function sortByPriceDesc($category) {
+        $products = $category ? Product::where('category', $category)->orderBy('price', 'desc')->paginate(12) : collect();
+
+         $brands = $products->unique('brand')->pluck('brand');
+
+        $colors = $products->unique('color')->pluck('color');
+
+        return view('products', ['products' => $products, 'brands' => $brands, 'colors' => $colors]);
     }
 
     public function store(Request $request) {

@@ -75,24 +75,24 @@
                         Značka
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Fender</a></li>
-                        <li><a class="dropdown-item" href="#">Gibson</a></li>
-                        <li><a class="dropdown-item" href="#">Yamaha</a></li>
+                        @if (isset($brands) && count($brands) > 0)
+                            @foreach ($brands as $brand)
+                                <li><a class="dropdown-item" href="#">{{ $brand }}</a></li>
+                            @endforeach
+                        @endif
                     </ul>
                 </div>
                 <div class="btn-group">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false" id="filterButton">
-                        Cenový rozsah
+                        Farba
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">0 - 49 €</a></li>
-                        <li><a class="dropdown-item" href="#">50 - 149 €</a></li>
-                        <li><a class="dropdown-item" href="#">150 - 299 €</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">300 - €</a></li>
+                        @if (isset($colors) && count($colors) > 0)
+                            @foreach ($colors as $color)
+                                <li><a class="dropdown-item" href="#">{{ $color }}</a></li>
+                            @endforeach
+                        @endif
                     </ul>
                 </div>
                 <div class="btn-group">
@@ -101,10 +101,10 @@
                         Zoradiť
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Od najlacnejšieho</a></li>
-                        <li><a class="dropdown-item" href="#">Od najdrahšieho</a></li>
-                        <li><a class="dropdown-item" href="#">Podľa abecedy vzostupne</a></li>
-                        <li><a class="dropdown-item" href="#">Podľa abecedy zostupne</a></li>
+                        @if (count($products) > 0)
+                        <li><a class="dropdown-item" href="/products/sortByPriceAsc/{{$products->first()->category}}">Od najlacnejšieho</a></li>
+                        <li><a class="dropdown-item" href="/products/sortByPriceDesc/{{$products->first()->category}}">Od najdrahšieho</a></li>
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -117,8 +117,8 @@
             @if (count($products) > 0)
             @foreach ($products as $product)
             <div class="col-md-4">
-                <div class="card" onclick="location.href='products/{{ $product->id }}'">
-                    <img src="images/grand_piano_licensable.png" class="card-img-top img-fluid" alt="...">
+                <div class="card" onclick="location.href='/products/{{ $product->id }}'">
+                    <img src="images/grand_piano_licensable.png" class="card-img-top img-fluid" alt="{{$product->name}}">
                     <div class="card-body">
                         <h5 class="card-text"><strong>{{$product->name}}</strong></h5>
                         <div class="row">
