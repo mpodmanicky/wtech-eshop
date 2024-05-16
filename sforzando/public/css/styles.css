@@ -205,6 +205,20 @@ li {
     list-style-type: none;
 }
 
+#product-card img {
+    width: 320px;
+    height: 100px;
+}
+
+#product-card {
+    display: flex;
+    /* Set display to flex */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Optionally center content vertically */
+}
+
 @media screen and (min-width: 768px) {
     #categoriesCarousel .carousel-inner {
         display: flex;

@@ -128,7 +128,7 @@
             @if (count($products) > 0)
             @foreach ($products as $product)
             <div class="col-md-4">
-                <div class="card" onclick="location.href='/products/{{ $product->id }}'">
+                <div class="card" id="product-card"onclick="location.href='/products/{{ $product->id }}'">
                 @if ($product->images->first())
                     <img src="{{ asset('images/product-images/' . $product->images->first()->url) }}" class="card-img-top img-fluid" alt="{{$product->name}}">
                 @else
