@@ -73,7 +73,6 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <form action="{{ route('products') }}" method="GET">
-                        @csrf
                         <div class="card">
                             <img src="images/guitar_licensable.png" id="guitar" alt="guitar" class="img-fluid">
                             <div class="card-body text-center">
@@ -86,7 +85,6 @@
                 </div>
                 <div class="carousel-item">
                     <form action="{{ route('products') }}" method="GET">
-                        @csrf
                         <div class="card">
                             <img src="images/acoustic-guitar-licensable.png" id="acoustic-guitar" alt="acoustic guitar"
                                 class="img-fluid">
@@ -100,7 +98,6 @@
                 </div>
                 <div class="carousel-item">
                     <form action="{{ route('products') }}" method="GET">
-                        @csrf
                         <div class="card">
                             <img src="images/trumpet-licensable.jpg" id="trumpet" alt="trumpet" class="img-fluid">
                             <div class="card-body text-center">
@@ -113,7 +110,6 @@
                 </div>
                 <div class="carousel-item">
                     <form action="{{ route('products') }}" method="GET">
-                        @csrf
                         <div class="card">
                             <img src="images/drums-licensable.png" id="drums" alt="drums" class="img-fluid">
                             <div class="card-body text-center">
@@ -126,7 +122,6 @@
                 </div>
                 <div class="carousel-item">
                     <form action="{{ route('products') }}" method="GET">
-                        @csrf
                         <div class="card">
                             <img src="images/grand_piano_licensable.png" id="grandpiano" alt="grandpiano"
                                 class="img-fluid">
@@ -140,7 +135,6 @@
                 </div>
                 <div class="carousel-item">
                     <form action="{{ route('products') }}" method="GET">
-                        @csrf
                         <div class="card">
                             <img src="images/bass-guitar-licensable.png" id="bass-guitar" alt="bass guitar"
                                 class="img-fluid">

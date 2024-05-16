@@ -20,6 +20,8 @@ class ProductController extends Controller
 
         $colors = $products->unique('color')->pluck('color');
 
+        $products = $products->withPath('products?category=' . $category);
+
         return view('products', ['products' => $products, 'brands' => $brands, 'colors' => $colors]);
     }
 
